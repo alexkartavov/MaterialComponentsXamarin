@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using CommandLineParser.Arguments;
+using CommandLineParser.Exceptions;
 
 namespace PostSharpie
 {
@@ -7,10 +10,61 @@ namespace PostSharpie
         static void Main(string[] args)
         {
             // process args
+            CommandLineParser.CommandLineParser parser =
+                                 new CommandLineParser.CommandLineParser();
+
+            var helpArgument = new SwitchArgument(
+                'h', "help", "Display usage help", false);
+            var inputArgument = new DirectoryArgument(
+                'i', "input", "Path to the input folder. The folder must contain ApiDefinitions.cs and StructsAndEnums.cs");
+            var outputArgument = new DirectoryArgument(
+                'o', "output", "Path to the output folder");
+            outputArgument.DirectoryMustExist = false;
+            var namespaceArgument = new ValueArgument<string>(
+                'n', "namespace", "Namespace for the individual objects");
+
+            parser.Arguments.Add(helpArgument);
+            parser.Arguments.Add(inputArgument);
+            parser.Arguments.Add(outputArgument);
+            parser.Arguments.Add(namespaceArgument);
+           
+            try
+            {
+                parser.ParseCommandLine(args);
+
+                if (helpArgument.Parsed && helpArgument.Value)
+                {
+                    parser.ShowUsage();
+                }
+            }
+            catch (CommandLineException e)
+            {
+                Console.WriteLine(e.Message);
+                return;
+            }
+            catch (System.IO.DirectoryNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+                return;
+            }
 
             // load input files - ApiDefinitions.cs StructsAndEnums.cs
+            var sharpieParser = new SharpieParser();
+            DirectoryInfo inputFolder = inputArgument.Parsed ? inputArgument.Value : new DirectoryInfo(".");
+
+            try
+            {
+                sharpieParser.ParseInputFolder(inputFolder.FullName);
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+                return;
+            }
 
             // output each interface/delegate/enum into separate files, add usings, and namespace
+            DirectoryInfo outputFolder = outputArgument.Parsed ? outputArgument.Value : new DirectoryInfo("./PostSharpieParsed");
+            sharpieParser.WriteOutput(outputFolder.FullName);
 
             // generate JSON config file for each objects
             // MDCControl: {
