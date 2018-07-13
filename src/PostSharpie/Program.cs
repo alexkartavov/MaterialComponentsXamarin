@@ -7,6 +7,10 @@ namespace PostSharpie
 {
     class Program
     {
+        static readonly string DefaultInputFolder = ".";
+        static readonly string DefaultOutputFolder = "./PostSharpieParsed";
+        static readonly string DefaultNamespace = "MaterialComponents";
+
         static void Main(string[] args)
         {
             // process args
@@ -50,7 +54,7 @@ namespace PostSharpie
 
             // load input files - ApiDefinitions.cs StructsAndEnums.cs
             var sharpieParser = new SharpieParser();
-            DirectoryInfo inputFolder = inputArgument.Parsed ? inputArgument.Value : new DirectoryInfo(".");
+            var inputFolder = inputArgument.Parsed ? inputArgument.Value : new DirectoryInfo(DefaultInputFolder);
 
             try
             {
@@ -63,8 +67,11 @@ namespace PostSharpie
             }
 
             // output each interface/delegate/enum into separate files, add usings, and namespace
-            DirectoryInfo outputFolder = outputArgument.Parsed ? outputArgument.Value : new DirectoryInfo("./PostSharpieParsed");
-            sharpieParser.WriteOutput(outputFolder.FullName);
+            var outputFolder = outputArgument.Parsed ? outputArgument.Value : new DirectoryInfo(DefaultOutputFolder);
+            var ns = namespaceArgument.Parsed ? namespaceArgument.Value : DefaultNamespace;
+
+            sharpieParser.WriteOutput(outputFolder.FullName, ns);
+            sharpieParser.WriteProject(outputFolder.FullName, "MaterialComponents");
 
             // generate JSON config file for each objects
             // MDCControl: {

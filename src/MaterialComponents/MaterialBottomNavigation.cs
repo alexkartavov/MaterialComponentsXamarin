@@ -66,7 +66,7 @@ namespace MaterialComponents.MaterialBottomNavigation
 
     // @protocol MDCColorScheme
     [Protocol, Model]
-    interface IMDCColorScheme
+    interface MDCColorScheme
     {
         // @required @property (readonly, nonatomic, strong) UIColor * _Nonnull primaryColor;
         [Abstract]
@@ -97,7 +97,7 @@ namespace MaterialComponents.MaterialBottomNavigation
     // @interface MDCBasicColorScheme : NSObject <MDCColorScheme, NSCopying>
     [BaseType(typeof(NSObject))]
     [DisableDefaultCtor]
-    interface MDCBasicColorScheme : IMDCColorScheme, INSCopying
+    interface MDCBasicColorScheme : MDCColorScheme, INSCopying
     {
         /*// @property (readonly, nonatomic, strong) UIColor * _Nonnull primaryColor;
         [Export("primaryColor", ArgumentSemantic.Strong)]

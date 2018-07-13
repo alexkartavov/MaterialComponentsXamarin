@@ -1,30 +1,21 @@
 ﻿<Properties StartupConfiguration="{05DED03B-94AD-46B9-9BC9-57FB73DE3E79}|Default">
   <MonoDevelop.Ide.ItemProperties.Pesto PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.FF637825-C331-4937-84AD-32D5AF917EA2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/Components/XfMaterialEditor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/MaterialComponents.Parsed/MDCButtonColorThemer.cs">
     <Files>
-      <File FileName="../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MaterialEditorRenderer.cs" Line="41" Column="30" />
-      <File FileName="../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MaterialEntryRenderer.cs" Line="98" Column="1" />
-      <File FileName="src/MaterialComponents/MaterialTextFields.cs" Line="444" Column="91" />
-      <File FileName="../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/Components/XfMaterialEditor.cs" Line="6" Column="40" />
-      <File FileName="../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/EditorPage.xaml" Line="14" Column="31" />
-      <File FileName="../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/EntryPage.xaml" Line="3" Column="69" />
-      <File FileName="../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Main.cs" Line="21" Column="1" />
+      <File FileName="src/PostSharpie/SharpieParser.cs" Line="236" Column="4" />
+      <File FileName="src/PostSharpie/Definitions/ApiDefinition.cs" Line="21" Column="2" />
+      <File FileName="src/MaterialComponents.Parsed/MDCBasicColorScheme.cs" Line="16" Column="3" />
+      <File FileName="src/MaterialComponents.Parsed/MDCSemanticColorScheme.cs" Line="1" Column="1" />
+      <File FileName="src/MaterialComponents.Parsed/MDCFlexibleHeaderView.cs" Line="61" Column="50" />
+      <File FileName="src/MaterialComponents.Parsed/MDCButtonColorThemer.cs" Line="23" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/akartavov/Source/MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MaterialEntryRenderer.cs" relfile="Forms/MaterialComponentsXamarinForms.iOS/Components/MaterialEntryRenderer.cs" line="97" column="1" />
-      <Breakpoint file="/Users/akartavov/Source/MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MaterialEntryRenderer.cs" relfile="Forms/MaterialComponentsXamarinForms.iOS/Components/MaterialEntryRenderer.cs" line="103" column="1" />
-      <Breakpoint file="/Users/akartavov/Source/MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MaterialEditorRenderer.cs" relfile="Forms/MaterialComponentsXamarinForms.iOS/Components/MaterialEditorRenderer.cs" line="80" column="1" />
-      <Breakpoint file="/Users/akartavov/Source/MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MaterialEditorRenderer.cs" relfile="Forms/MaterialComponentsXamarinForms.iOS/Components/MaterialEditorRenderer.cs" line="72" column="1" />
-      <Breakpoint file="/Users/akartavov/Source/MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MaterialEditorRenderer.cs" relfile="Forms/MaterialComponentsXamarinForms.iOS/Components/MaterialEditorRenderer.cs" line="51" column="1" />
-      <Breakpoint file="/Users/akartavov/Source/MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MaterialEditorRenderer.cs" relfile="Forms/MaterialComponentsXamarinForms.iOS/Components/MaterialEditorRenderer.cs" line="29" column="1" />
-      <Breakpoint file="/Users/akartavov/Source/MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MaterialEditorRenderer.cs" relfile="Forms/MaterialComponentsXamarinForms.iOS/Components/MaterialEditorRenderer.cs" line="67" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.ShrineXamarin PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.FF637825-C331-4937-84AD-32D5AF917EA2" />
+  <MonoDevelop.Ide.ItemProperties.ShrineXamarin PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.491EBC39-8486-422B-8DF5-E6662C390A52" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.MDC-Tutorial PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.FF637825-C331-4937-84AD-32D5AF917EA2" />
   <MonoDevelop.Ide.ItemProperties.ShrineRemoteImage PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.FF637825-C331-4937-84AD-32D5AF917EA2" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace PostSharpie
 {
@@ -35,7 +36,7 @@ namespace PostSharpie
 
             if (!inputFolder.EndsWith('/'))
                 inputFolder += '/';
-            
+
             if (!File.Exists(inputFolder + ApiDefinitionsFile))
                 throw new ArgumentException(inputFolder + ApiDefinitionsFile + " does not exist.");
             if (!File.Exists(inputFolder + StructsAndEnumsFile))
@@ -51,19 +52,20 @@ namespace PostSharpie
             {
                 string line;
                 List<string> meta = null;
-                while ((line = f.ReadLine())!=null)
+                while ((line = f.ReadLine()) != null)
                 {
                     if (string.IsNullOrWhiteSpace(line))
                         continue;
-                    
-                    if(line.StartsWith("using ", StringComparison.Ordinal) && !Usings.Contains(line))
+
+                    if (line.StartsWith("using ", StringComparison.Ordinal))
                     {
-                        Usings.Add(line);
+                        if (!Usings.Contains(line))
+                            Usings.Add(line);
                     }
-                    else if (line.StartsWith("// @", StringComparison.Ordinal))
+                    else if (line.StartsWith("interface ", StringComparison.Ordinal))
                     {
                         var def = new ApiDefinition();
-                        def.Lines.Add(line);
+                        def.AddLine(line);
                         ReadDefinitionLines(f, def);
                         def.MetaLines = meta;
                         meta = null;
@@ -73,7 +75,7 @@ namespace PostSharpie
                     else if (line.StartsWith("public enum ", StringComparison.Ordinal))
                     {
                         var def = new EnumDefinition();
-                        def.Lines.Add(line);
+                        def.AddLine(line);
                         ReadDefinitionLines(f, def);
                         def.MetaLines = meta;
                         meta = null;
@@ -83,7 +85,7 @@ namespace PostSharpie
                     else if (line.StartsWith("static class ", StringComparison.Ordinal))
                     {
                         var def = new StructDefinition();
-                        def.Lines.Add(line);
+                        def.AddLine(line);
                         ReadDefinitionLines(f, def);
                         def.MetaLines = meta;
                         meta = null;
@@ -119,11 +121,184 @@ namespace PostSharpie
 
         #region Output Methods
 
-        public void WriteOutput(string fullName)
+        public void WriteOutput(string outputFolder, string ns)
         {
-            
+            var dir = new DirectoryInfo(outputFolder);
+            dir.Create();
+
+            foreach (var def in Definitions)
+            {
+                WriteDefinition(outputFolder, ns, def);
+            }
+        }
+
+        private void WriteDefinition(string outputFolder, string ns, IDefinition def)
+        {
+            if (!string.IsNullOrEmpty(def.Name))
+            {
+                if (!outputFolder.EndsWith('/'))
+                    outputFolder += '/';
+
+                using (var streamWriter = new StreamWriter(outputFolder + def.Name + ".cs"))
+                {
+
+                    WriteUsings(streamWriter);
+                    WriteGap(streamWriter);
+                    WriteNamespaceBegins(streamWriter, ns);
+                    WriteLines(streamWriter, def.MetaLines);
+                    WriteLines(streamWriter, def.Lines);
+                    WriteNamespaceEnds(streamWriter);
+                }
+            }
+        }
+
+        private void WriteGap(StreamWriter streamWriter)
+        {
+            streamWriter.WriteLine();
+        }
+
+        private void WriteUsings(StreamWriter streamWriter)
+        {
+            foreach (var line in Usings)
+                streamWriter.WriteLine(line);
+        }
+
+        private void WriteNamespaceBegins(StreamWriter streamWriter, string ns)
+        {
+            streamWriter.WriteLine("namespace " + ns);
+            streamWriter.WriteLine("{");
+        }
+
+        private void WriteNamespaceEnds(StreamWriter streamWriter)
+        {
+            streamWriter.WriteLine("}");
+        }
+
+        private void WriteLines(StreamWriter streamWriter, List<string> lines)
+        {
+            if (lines == null)
+                return;
+
+            foreach (var line in lines)
+            {
+                streamWriter.WriteLine("\t" + line);
+            }
         }
 
         #endregion //Output Methods
+
+        #region Output Project
+
+        readonly string _bindingApiDef = @"<ObjcBindingApiDefinition Include=""{0}"" />";
+        readonly string _bindingCoreTmpl = @"<ObjcBindingCoreSource Include=""{0}"" />";
+        readonly string _projectTmpl = @"<Project DefaultTargets=""Build"" ToolsVersion=""4.0"" xmlns=""http://schemas.microsoft.com/developer/msbuild/2003"">
+  <PropertyGroup>
+    <Configuration Condition="" '$(Configuration)' == '' "">Debug</Configuration>
+    <Platform Condition="" '$(Platform)' == '' "">AnyCPU</Platform>
+    <ProjectGuid>{F888B10B-1D2E-44F5-AAE9-3335566E67A7}</ProjectGuid>
+    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MaterialComponents</RootNamespace>
+    <AssemblyName>MaterialComponents</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <ReleaseVersion>39.0.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' "">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile></DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>CS0108;CS0114;MSB9004</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include=""System"" />
+    <Reference Include=""Xamarin.iOS"" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include=""Properties\AssemblyInfo.cs"" />
+  </ItemGroup>
+  <ItemGroup>
+{0}
+  </ItemGroup>
+  <ItemGroup>
+{1}
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include=""..\..\references.55\MDFTextAccessibility.framework"">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include=""..\..\references.55\MotionAnimator.framework"">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include=""..\..\references.55\MotionInterchange.framework"">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include=""..\..\references.55\MotionTransitioning.framework"">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include=""..\..\references.55\MaterialComponents.framework"">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include=""..\..\references\MDFInternationalization.framework"">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+  </ItemGroup>
+  <Import Project=""$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets"" />
+</Project>";
+
+        public void WriteProject(string outputFolder, string projName)
+        {
+            var dir = new DirectoryInfo(outputFolder);
+            dir.Create();
+
+            var bindingsApiDef = new StringBuilder();
+            var bindingsCoreDef = new StringBuilder();
+
+            foreach (var def in Definitions)
+            {
+                if (!string.IsNullOrWhiteSpace(def.Name))
+                {
+                    if (def is ApiDefinition)
+                    {
+                        bindingsApiDef.AppendLine("\t" + string.Format(_bindingApiDef, def.Name + ".cs"));
+                    }
+                    else if (def is EnumDefinition || def is StructDefinition)
+                    {
+                        bindingsCoreDef.AppendLine("\t" + string.Format(_bindingCoreTmpl, def.Name + ".cs")); ;
+                    }
+                }
+                else
+                {
+                    
+                }
+            }
+
+            using (var f = new StreamWriter(dir.FullName + "/" + projName + ".csproj"))
+            {
+                f.Write(_projectTmpl
+                        .Replace("{0}", bindingsApiDef.ToString())
+                        .Replace("{1}", bindingsCoreDef.ToString()));
+            }
+        }
+
+        #endregion //Output Project
     }
 }
