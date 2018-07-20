@@ -40,8 +40,8 @@ namespace MaterialComponents
 		[DesignatedInitializer]
 		IntPtr Constructor (UIColor[] colors, nuint mainColorIndex, nuint lightColorIndex, nuint darkColorIndex);
 		// -(instancetype _Nonnull)initWithCoder:(NSCoder * _Nonnull)coder __attribute__((objc_designated_initializer));
-		[Export ("initWithCoder:")]
+		/*[Export ("initWithCoder:")]
 		[DesignatedInitializer]
-		IntPtr Constructor (NSCoder coder);
+		IntPtr Constructor (NSCoder coder);*/
 	}
 }

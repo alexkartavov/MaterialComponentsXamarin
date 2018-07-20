@@ -21,15 +21,15 @@ namespace MaterialComponents
 		[Static]
 		[Export ("applyColorScheme:toSlider:")]
 		void ApplyColorScheme (MDCColorScheme colorScheme, MDCSlider slider);
-		// +(MDCBasicColorScheme * _Nonnull)defaultSliderLightColorScheme;
-		[Static]
-		[Export ("defaultSliderLightColorScheme")]
-		[Verify (MethodToProperty)]
-		MDCBasicColorScheme DefaultSliderLightColorScheme { get; }
-		// +(MDCBasicColorScheme * _Nonnull)defaultSliderDarkColorScheme;
-		[Static]
-		[Export ("defaultSliderDarkColorScheme")]
-		[Verify (MethodToProperty)]
-		MDCBasicColorScheme DefaultSliderDarkColorScheme { get; }
+        // +(MDCBasicColorScheme * _Nonnull)defaultSliderLightColorScheme;
+        [Static]
+        [Export("defaultSliderLightColorScheme")]
+        //[Verify (MethodToProperty)]
+        MDCBasicColorScheme DefaultSliderLightColorScheme(); //{ get; }
+                                                             // +(MDCBasicColorScheme * _Nonnull)defaultSliderDarkColorScheme;
+        [Static]
+        [Export("defaultSliderDarkColorScheme")]
+        //[Verify (MethodToProperty)]
+        MDCBasicColorScheme DefaultSliderDarkColorScheme(); //{ get; }
 	}
 }

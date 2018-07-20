@@ -71,14 +71,14 @@ namespace MaterialComponents
 		[NullAllowed, Export ("placeholder")]
 		string Placeholder { get; set; }
 		// @required @property (readonly, nonatomic, strong) UILabel * _Nonnull placeholderLabel;
-		[Abstract]
+		//[Abstract]
 		[Export ("placeholderLabel", ArgumentSemantic.Strong)]
 		UILabel PlaceholderLabel { get; }
-		[Wrap ("WeakPositioningDelegate"), Abstract]
+		[Wrap ("WeakPositioningDelegate")/*, Abstract*/]
 		[NullAllowed]
 		MDCTextInputPositioningDelegate PositioningDelegate { get; set; }
 		// @required @property (nonatomic, weak) id<MDCTextInputPositioningDelegate> _Nullable positioningDelegate;
-		[Abstract]
+		//[Abstract]
 		[NullAllowed, Export ("positioningDelegate", ArgumentSemantic.Weak)]
 		NSObject WeakPositioningDelegate { get; set; }
 		// @required @property (copy, nonatomic) NSString * _Nullable text;

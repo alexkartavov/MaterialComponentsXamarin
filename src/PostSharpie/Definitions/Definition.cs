@@ -17,6 +17,8 @@ namespace PostSharpie
 
         public string Name { get; protected set; }
 
+        public bool Active { get; set; } = true;
+
         public virtual void AddLine(string line)
         {
             Lines.Add(line);

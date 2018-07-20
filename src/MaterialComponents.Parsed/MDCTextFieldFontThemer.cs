@@ -20,10 +20,10 @@ namespace MaterialComponents
 		// +(void)applyFontScheme:(id<MDCFontScheme> _Nonnull)fontScheme toAllTextInputControllersOfClass:(Class<MDCTextInputController> _Nonnull)textInputControllerClass;
 		[Static]
 		[Export ("applyFontScheme:toAllTextInputControllersOfClass:")]
-		void ApplyFontScheme (MDCFontScheme fontScheme, MDCTextInputController textInputControllerClass);
+        void ApplyFontScheme_ToAllTextInputControllersOfClass (MDCFontScheme fontScheme, MDCTextInputController textInputControllerClass);
 		// +(void)applyFontScheme:(id<MDCFontScheme> _Nonnull)fontScheme toTextField:(MDCTextField * _Nullable)textField;
 		[Static]
 		[Export ("applyFontScheme:toTextField:")]
-		void ApplyFontScheme (MDCFontScheme fontScheme, [NullAllowed] MDCTextField textField);
+        void ApplyFontScheme_ToTextField (MDCFontScheme fontScheme, [NullAllowed] MDCTextField textField);
 	}
 }

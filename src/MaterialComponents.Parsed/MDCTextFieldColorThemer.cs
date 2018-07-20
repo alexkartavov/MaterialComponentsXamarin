@@ -20,18 +20,18 @@ namespace MaterialComponents
 		// +(void)applySemanticColorScheme:(id<MDCColorScheming> _Nonnull)colorScheme toAllTextInputControllersOfClass:(Class<MDCTextInputController> _Nonnull)textInputControllerClass;
 		[Static]
 		[Export ("applySemanticColorScheme:toAllTextInputControllersOfClass:")]
-		void ApplySemanticColorScheme (MDCColorScheming colorScheme, MDCTextInputController textInputControllerClass);
+        void ApplySemanticColorScheme_ToAllTextInputControllersOfClass (MDCColorScheming colorScheme, MDCTextInputController textInputControllerClass);
 		// +(void)applySemanticColorScheme:(id<MDCColorScheming> _Nonnull)colorScheme toTextInput:(id<MDCTextInput> _Nonnull)textInput;
 		[Static]
 		[Export ("applySemanticColorScheme:toTextInput:")]
-		void ApplySemanticColorScheme (MDCColorScheming colorScheme, MDCTextInput textInput);
+        void ApplySemanticColorScheme_ToTextInput (MDCColorScheming colorScheme, MDCTextInput textInput);
 		// +(void)applyColorScheme:(id<MDCColorScheme> _Nonnull)colorScheme toTextInputController:(id<MDCTextInputController> _Nonnull)textInputController;
 		[Static]
 		[Export ("applyColorScheme:toTextInputController:")]
-		void ApplyColorScheme (MDCColorScheme colorScheme, MDCTextInputController textInputController);
+        void ApplyColorScheme_ToTextInputController (MDCColorScheme colorScheme, MDCTextInputController textInputController);
 		// +(void)applyColorScheme:(id<MDCColorScheme> _Nonnull)colorScheme toAllTextInputControllersOfClass:(Class<MDCTextInputController> _Nonnull)textInputControllerClass;
 		[Static]
 		[Export ("applyColorScheme:toAllTextInputControllersOfClass:")]
-		void ApplyColorScheme (MDCColorScheme colorScheme, MDCTextInputController textInputControllerClass);
+        void ApplyColorScheme_ToAllTextInputControllersOfClass (MDCColorScheme colorScheme, MDCTextInputController textInputControllerClass);
 	}
 }

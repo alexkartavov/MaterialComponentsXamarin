@@ -20,11 +20,11 @@ namespace MaterialComponents
 		// +(void)applySemanticColorScheme:(id<MDCColorScheming> _Nonnull)colorScheme toFlatButton:(MDCButton * _Nonnull)flatButton;
 		[Static]
 		[Export ("applySemanticColorScheme:toFlatButton:")]
-		void ApplySemanticColorScheme (MDCColorScheming colorScheme, MDCButton flatButton);
+        void ApplySemanticColorScheme_ToFlatButton (MDCColorScheming colorScheme, MDCButton flatButton);
 		// +(void)applySemanticColorScheme:(id<MDCColorScheming> _Nonnull)colorScheme toRaisedButton:(MDCButton * _Nonnull)raisedButton;
 		[Static]
 		[Export ("applySemanticColorScheme:toRaisedButton:")]
-		void ApplySemanticColorScheme (MDCColorScheming colorScheme, MDCButton raisedButton);
+        void ApplySemanticColorScheme_ToRaisedButton (MDCColorScheming colorScheme, MDCButton raisedButton);
 		// +(void)applySemanticColorScheme:(id<MDCColorScheming> _Nonnull)colorScheme toFloatingButton:(MDCFloatingButton * _Nonnull)floatingButton;
 		[Static]
 		[Export ("applySemanticColorScheme:toFloatingButton:")]

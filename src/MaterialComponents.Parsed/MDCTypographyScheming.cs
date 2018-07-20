@@ -11,6 +11,7 @@ namespace MaterialComponents
 {
 	// @protocol MDCTypographyScheming
 	[Protocol, Model]
+    [BaseType(typeof(NSObject))]
 	interface MDCTypographyScheming
 	{
 		// @required @property (readonly, nonatomic) UIFont * _Nonnull headline1;

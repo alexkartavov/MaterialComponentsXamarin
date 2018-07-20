@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using CoreAnimation;
 using CoreGraphics;
 using Foundation;
@@ -16,22 +16,22 @@ namespace MaterialComponents
 	{
 		// @property (readonly, nonatomic, strong) UIColor * _Nonnull primaryColor;
 		[Export ("primaryColor", ArgumentSemantic.Strong)]
-		UIColor PrimaryColor { get; }
+		new UIColor PrimaryColor { get; }
 		// @property (readonly, nonatomic, strong) UIColor * _Nonnull primaryLightColor;
 		[Export ("primaryLightColor", ArgumentSemantic.Strong)]
-		UIColor PrimaryLightColor { get; }
+        new UIColor PrimaryLightColor { get; }
 		// @property (readonly, nonatomic, strong) UIColor * _Nonnull primaryDarkColor;
 		[Export ("primaryDarkColor", ArgumentSemantic.Strong)]
-		UIColor PrimaryDarkColor { get; }
+        new UIColor PrimaryDarkColor { get; }
 		// @property (readonly, nonatomic, strong) UIColor * _Nonnull secondaryColor;
 		[Export ("secondaryColor", ArgumentSemantic.Strong)]
-		UIColor SecondaryColor { get; }
+        new UIColor SecondaryColor { get; }
 		// @property (readonly, nonatomic, strong) UIColor * _Nonnull secondaryLightColor;
 		[Export ("secondaryLightColor", ArgumentSemantic.Strong)]
-		UIColor SecondaryLightColor { get; }
+        new UIColor SecondaryLightColor { get; }
 		// @property (readonly, nonatomic, strong) UIColor * _Nonnull secondaryDarkColor;
 		[Export ("secondaryDarkColor", ArgumentSemantic.Strong)]
-		UIColor SecondaryDarkColor { get; }
+        new UIColor SecondaryDarkColor { get; }
 		// -(instancetype _Nonnull)initWithPrimaryColor:(UIColor * _Nonnull)primaryColor primaryLightColor:(UIColor * _Nonnull)primaryLightColor primaryDarkColor:(UIColor * _Nonnull)primaryDarkColor secondaryColor:(UIColor * _Nonnull)secondaryColor secondaryLightColor:(UIColor * _Nonnull)secondaryLightColor secondaryDarkColor:(UIColor * _Nonnull)secondaryDarkColor __attribute__((objc_designated_initializer));
 		[Export ("initWithPrimaryColor:primaryLightColor:primaryDarkColor:secondaryColor:secondaryLightColor:secondaryDarkColor:")]
 		[DesignatedInitializer]

@@ -11,7 +11,7 @@ namespace MaterialComponents
 {
 	// @interface MDCSystemFontLoader : NSObject <MDCTypographyFontLoading>
 	[BaseType (typeof(NSObject))]
-	interface MDCSystemFontLoader : IMDCTypographyFontLoading
+	interface MDCSystemFontLoader : MDCTypographyFontLoading
 	{
 	}
 }

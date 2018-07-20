@@ -20,10 +20,10 @@ namespace MaterialComponents
 		// +(void)applyTypographyScheme:(id<MDCTypographyScheming> _Nonnull)typographyScheme toAllTextInputControllersOfClass:(Class<MDCTextInputController> _Nonnull)textInputControllerClass;
 		[Static]
 		[Export ("applyTypographyScheme:toAllTextInputControllersOfClass:")]
-		void ApplyTypographyScheme (MDCTypographyScheming typographyScheme, MDCTextInputController textInputControllerClass);
+        void ApplyTypographyScheme_ToAllTextInputControllersOfClass (MDCTypographyScheming typographyScheme, MDCTextInputController textInputControllerClass);
 		// +(void)applyTypographyScheme:(id<MDCTypographyScheming> _Nonnull)typographyScheme toTextInput:(id<MDCTextInput> _Nonnull)textInput;
 		[Static]
 		[Export ("applyTypographyScheme:toTextInput:")]
-		void ApplyTypographyScheme (MDCTypographyScheming typographyScheme, MDCTextInput textInput);
+        void ApplyTypographyScheme_ToTextInput (MDCTypographyScheming typographyScheme, MDCTextInput textInput);
 	}
 }

@@ -9,8 +9,8 @@ using System.Runtime.InteropServices;
 
 namespace MaterialComponents
 {
-	[Static]
-	[Verify (ConstantsInterfaceAssociation)]
+	//[Static]
+	//[Verify (ConstantsInterfaceAssociation)]
 	partial interface Constants
 	{
 		// extern NSString *const _Nonnull MDCTextFieldTextDidSetTextNotification;
@@ -19,7 +19,7 @@ namespace MaterialComponents
 	}
 	// @interface MDCTextField : UITextField <MDCTextInput>
 	[BaseType (typeof(UITextField))]
-	interface MDCTextField : IMDCTextInput
+	interface MDCTextField : MDCTextInput
 	{
 		// @property (nonatomic, strong) UIView * _Nullable leadingView;
 		[NullAllowed, Export ("leadingView", ArgumentSemantic.Strong)]

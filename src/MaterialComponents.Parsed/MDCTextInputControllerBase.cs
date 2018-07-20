@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace MaterialComponents
 {
 	[Static]
-	[Verify (ConstantsInterfaceAssociation)]
+	//[Verify (ConstantsInterfaceAssociation)]
 	partial interface Constants
 	{
 		// extern const CGFloat MDCTextInputControllerBaseDefaultBorderRadius;
@@ -19,11 +19,11 @@ namespace MaterialComponents
 	}
 	// @interface MDCTextInputControllerBase : NSObject <MDCTextInputControllerFloatingPlaceholder>
 	[BaseType (typeof(NSObject))]
-	interface MDCTextInputControllerBase : IMDCTextInputControllerFloatingPlaceholder
+	interface MDCTextInputControllerBase : MDCTextInputControllerFloatingPlaceholder
 	{
 		// @property (nonatomic, strong) UIColor * _Null_unspecified backgroundColor;
 		[Export ("backgroundColor", ArgumentSemantic.Strong)]
-		UIColor BackgroundColor { get; set; }
+        new UIColor BackgroundColor { get; set; }
 		// @property (nonatomic, strong) UIColor * _Nullable borderFillColor;
 		[NullAllowed, Export ("borderFillColor", ArgumentSemantic.Strong)]
 		UIColor BorderFillColor { get; set; }

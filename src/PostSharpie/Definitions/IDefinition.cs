@@ -8,5 +8,6 @@ namespace PostSharpie
         List<string> Lines { get; }
         List<string> MetaLines { get; set; }
         string Name { get; }
+        bool Active { get; set; }
     }
 }

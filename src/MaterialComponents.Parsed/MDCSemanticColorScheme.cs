@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using CoreAnimation;
 using CoreGraphics;
 using Foundation;
@@ -15,34 +15,34 @@ namespace MaterialComponents
 	{
 		// @property (readwrite, nonatomic) UIColor * _Nonnull primaryColor;
 		[Export ("primaryColor", ArgumentSemantic.Assign)]
-		UIColor PrimaryColor { get; set; }
+        new UIColor PrimaryColor { get; set; }
 		// @property (readwrite, nonatomic) UIColor * _Nonnull primaryColorVariant;
 		[Export ("primaryColorVariant", ArgumentSemantic.Assign)]
-		UIColor PrimaryColorVariant { get; set; }
+        new UIColor PrimaryColorVariant { get; set; }
 		// @property (readwrite, nonatomic) UIColor * _Nonnull secondaryColor;
 		[Export ("secondaryColor", ArgumentSemantic.Assign)]
-		UIColor SecondaryColor { get; set; }
+        new UIColor SecondaryColor { get; set; }
 		// @property (readwrite, nonatomic) UIColor * _Nonnull errorColor;
 		[Export ("errorColor", ArgumentSemantic.Assign)]
-		UIColor ErrorColor { get; set; }
+        new UIColor ErrorColor { get; set; }
 		// @property (readwrite, nonatomic) UIColor * _Nonnull surfaceColor;
 		[Export ("surfaceColor", ArgumentSemantic.Assign)]
-		UIColor SurfaceColor { get; set; }
+        new UIColor SurfaceColor { get; set; }
 		// @property (readwrite, nonatomic) UIColor * _Nonnull backgroundColor;
 		[Export ("backgroundColor", ArgumentSemantic.Assign)]
-		UIColor BackgroundColor { get; set; }
+        new UIColor BackgroundColor { get; set; }
 		// @property (readwrite, nonatomic) UIColor * _Nonnull onPrimaryColor;
 		[Export ("onPrimaryColor", ArgumentSemantic.Assign)]
-		UIColor OnPrimaryColor { get; set; }
+        new UIColor OnPrimaryColor { get; set; }
 		// @property (readwrite, nonatomic) UIColor * _Nonnull onSecondaryColor;
 		[Export ("onSecondaryColor", ArgumentSemantic.Assign)]
-		UIColor OnSecondaryColor { get; set; }
+        new UIColor OnSecondaryColor { get; set; }
 		// @property (readwrite, nonatomic) UIColor * _Nonnull onSurfaceColor;
 		[Export ("onSurfaceColor", ArgumentSemantic.Assign)]
-		UIColor OnSurfaceColor { get; set; }
+        new UIColor OnSurfaceColor { get; set; }
 		// @property (readwrite, nonatomic) UIColor * _Nonnull onBackgroundColor;
 		[Export ("onBackgroundColor", ArgumentSemantic.Assign)]
-		UIColor OnBackgroundColor { get; set; }
+        new UIColor OnBackgroundColor { get; set; }
 		// -(instancetype _Nonnull)initWithDefaults:(MDCColorSchemeDefaults)defaults;
 		[Export ("initWithDefaults:")]
 		IntPtr Constructor (MDCColorSchemeDefaults defaults);

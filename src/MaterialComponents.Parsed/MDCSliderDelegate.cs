@@ -19,9 +19,9 @@ namespace MaterialComponents
 		bool Slider (MDCSlider slider, nfloat value);
 		// @optional -(NSString * _Nonnull)slider:(MDCSlider * _Nonnull)slider displayedStringForValue:(CGFloat)value;
 		[Export ("slider:displayedStringForValue:")]
-		string Slider (MDCSlider slider, nfloat value);
+        string Slider_DisplayedStringForValue (MDCSlider slider, nfloat value);
 		// @optional -(NSString * _Nonnull)slider:(MDCSlider * _Nonnull)slider accessibilityLabelForValue:(CGFloat)value;
 		[Export ("slider:accessibilityLabelForValue:")]
-		string Slider (MDCSlider slider, nfloat value);
+        string Slider_AccessibilityLabelForValue (MDCSlider slider, nfloat value);
 	}
 }

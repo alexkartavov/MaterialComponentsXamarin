@@ -10,8 +10,8 @@ using System.Runtime.InteropServices;
 namespace MaterialComponents
 {
 	// @protocol MDCTextInputControllerFloatingPlaceholder <MDCTextInputController>
-	[Protocol, Model]
-	interface MDCTextInputControllerFloatingPlaceholder : IMDCTextInputController
+	[Protocol/*, Model*/]
+	interface MDCTextInputControllerFloatingPlaceholder : MDCTextInputController
 	{
 		// @required @property (nonatomic, strong) UIColor * _Null_unspecified floatingPlaceholderActiveColor;
 		[Abstract]

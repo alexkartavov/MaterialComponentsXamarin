@@ -10,6 +10,8 @@ namespace PostSharpie
         static readonly string DefaultInputFolder = ".";
         static readonly string DefaultOutputFolder = "./PostSharpieParsed";
         static readonly string DefaultNamespace = "MaterialComponents";
+        static readonly string DefaultProject = "MaterialComponents";
+        static readonly string DefaultConfigName = "MDCConfing.json";
 
         static void Main(string[] args)
         {
@@ -19,6 +21,8 @@ namespace PostSharpie
 
             var helpArgument = new SwitchArgument(
                 'h', "help", "Display usage help", false);
+            var configArgument = new SwitchArgument(
+                'c', "config", "Only generate config file.", false);
             var inputArgument = new DirectoryArgument(
                 'i', "input", "Path to the input folder. The folder must contain ApiDefinitions.cs and StructsAndEnums.cs");
             var outputArgument = new DirectoryArgument(
@@ -28,6 +32,7 @@ namespace PostSharpie
                 'n', "namespace", "Namespace for the individual objects");
 
             parser.Arguments.Add(helpArgument);
+            parser.Arguments.Add(configArgument);
             parser.Arguments.Add(inputArgument);
             parser.Arguments.Add(outputArgument);
             parser.Arguments.Add(namespaceArgument);
@@ -69,22 +74,21 @@ namespace PostSharpie
             // output each interface/delegate/enum into separate files, add usings, and namespace
             var outputFolder = outputArgument.Parsed ? outputArgument.Value : new DirectoryInfo(DefaultOutputFolder);
             var ns = namespaceArgument.Parsed ? namespaceArgument.Value : DefaultNamespace;
+            var cfgOnly = configArgument.Parsed ? configArgument.Value : false;
 
-            sharpieParser.WriteOutput(outputFolder.FullName, ns);
-            sharpieParser.WriteProject(outputFolder.FullName, "MaterialComponents");
+            // Create or update JSON config file that lists all components we are interested in generating.
+            sharpieParser.UpdateOrCreateConfig(outputFolder.FullName, DefaultConfigName);
 
-            // generate JSON config file for each objects
-            // MDCControl: {
-            //   GenerateXamarinFormsWrapper: boolean - to indicate that a wrapper needs to be created
-            //   BindableProperties: { - to list properties that are bindable and to generate renderers that copy values from Element to Control
-            //      list of properties
-            //   }
-            //   Events: {
-            //      list of events to propagate between renderer's Element and Control
-            //   }
-            // }
-            // This config to be used during second stage that generates XF wrappers
-            //}
+            if (!cfgOnly)
+            {
+                // Using JSON config create bindings
+                sharpieParser.WriteOutput(outputFolder.FullName, ns);
+                sharpieParser.WriteProject(outputFolder.FullName, DefaultProject);
+
+                // Using JSON config generates XF wrappers
+                sharpieParser.WriteXFWrappers(outputFolder.FullName, DefaultConfigName);
+            }
+
         }
     }
 }

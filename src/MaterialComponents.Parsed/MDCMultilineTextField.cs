@@ -11,14 +11,14 @@ namespace MaterialComponents
 {
 	// @interface MDCMultilineTextField : UIView <MDCTextInput, MDCMultilineTextInput>
 	[BaseType (typeof(UIView))]
-	interface MDCMultilineTextField : IMDCTextInput, IMDCMultilineTextInput
+	interface MDCMultilineTextField : MDCTextInput, MDCMultilineTextInput
 	{
 		// @property (assign, nonatomic) BOOL adjustsFontForContentSizeCategory;
 		[Export ("adjustsFontForContentSizeCategory")]
 		bool AdjustsFontForContentSizeCategory { get; set; }
 		// @property (assign, nonatomic) BOOL expandsOnOverflow;
 		[Export ("expandsOnOverflow")]
-		bool ExpandsOnOverflow { get; set; }
+		new bool ExpandsOnOverflow { get; set; }
 		[Wrap ("WeakLayoutDelegate")]
 		[NullAllowed]
 		MDCMultilineTextInputLayoutDelegate LayoutDelegate { get; set; }
@@ -33,10 +33,10 @@ namespace MaterialComponents
 		NSObject WeakMultilineDelegate { get; set; }
 		// @property (copy, nonatomic) NSString * _Nullable placeholder;
 		[NullAllowed, Export ("placeholder")]
-		string Placeholder { get; set; }
+        new string Placeholder { get; set; }
 		// @property (readonly, assign, nonatomic) UIEdgeInsets textInsets;
 		[Export ("textInsets", ArgumentSemantic.Assign)]
-		UIEdgeInsets TextInsets { get; }
+        new UIEdgeInsets TextInsets { get; }
 		// @property (nonatomic, strong) MDCIntrinsicHeightTextView * _Nullable textView __attribute__((iboutlet));
 		[NullAllowed, Export ("textView", ArgumentSemantic.Strong)]
 		MDCIntrinsicHeightTextView TextView { get; set; }

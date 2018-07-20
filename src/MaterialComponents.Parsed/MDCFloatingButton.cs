@@ -26,16 +26,16 @@ namespace MaterialComponents
 		[Static]
 		[Export ("floatingButtonWithShape:")]
 		MDCFloatingButton FloatingButtonWithShape (MDCFloatingButtonShape shape);
-		// +(CGFloat)defaultDimension;
-		[Static]
-		[Export ("defaultDimension")]
-		[Verify (MethodToProperty)]
-		nfloat DefaultDimension { get; }
-		// +(CGFloat)miniDimension;
-		[Static]
-		[Export ("miniDimension")]
-		[Verify (MethodToProperty)]
-		nfloat MiniDimension { get; }
+        // +(CGFloat)defaultDimension;
+        [Static]
+        [Export("defaultDimension")]
+        //[Verify (MethodToProperty)]
+        nfloat DefaultDimension(); //{ get; }
+        // +(CGFloat)miniDimension;
+        [Static]
+        [Export("miniDimension")]
+        //[Verify(MethodToProperty)]
+        nfloat MiniDimension(); //{ get; }
 		// -(instancetype _Nonnull)initWithFrame:(CGRect)frame shape:(MDCFloatingButtonShape)shape __attribute__((objc_designated_initializer));
 		[Export ("initWithFrame:shape:")]
 		[DesignatedInitializer]
@@ -44,9 +44,9 @@ namespace MaterialComponents
 		[Export ("initWithFrame:")]
 		IntPtr Constructor (CGRect frame);
 		// -(instancetype _Nullable)initWithCoder:(NSCoder * _Nonnull)aDecoder __attribute__((objc_designated_initializer));
-		[Export ("initWithCoder:")]
+		/*[Export ("initWithCoder:")]
 		[DesignatedInitializer]
-		IntPtr Constructor (NSCoder aDecoder);
+		IntPtr Constructor (NSCoder aDecoder);*/
 		// -(void)setMinimumSize:(CGSize)minimumSize forShape:(MDCFloatingButtonShape)shape inMode:(MDCFloatingButtonMode)mode __attribute__((annotate("ui_appearance_selector")));
 		[Export ("setMinimumSize:forShape:inMode:")]
 		void SetMinimumSize (CGSize minimumSize, MDCFloatingButtonShape shape, MDCFloatingButtonMode mode);

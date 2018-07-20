@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace MaterialComponents
 {
 	// @protocol MDCColorScheme <NSObject>
-	[Protocol, Model]
+	[Protocol/*, Model*/]
 	[BaseType (typeof(NSObject))]
 	interface MDCColorScheme
 	{

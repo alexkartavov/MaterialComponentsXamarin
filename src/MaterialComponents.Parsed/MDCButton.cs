@@ -44,8 +44,8 @@ namespace MaterialComponents
 		[Export ("mdc_adjustsFontForContentSizeCategory")]
 		bool Mdc_adjustsFontForContentSizeCategory { get; [Bind ("mdc_setAdjustsFontForContentSizeCategory:")] set; }
 		// @property (nonatomic, strong) id<MDCShapeGenerating> _Nullable shapeGenerator;
-		[NullAllowed, Export ("shapeGenerator", ArgumentSemantic.Strong)]
-		MDCShapeGenerating ShapeGenerator { get; set; }
+		//[NullAllowed, Export ("shapeGenerator", ArgumentSemantic.Strong)]
+		//MDCShapeGenerating ShapeGenerator { get; set; }
 		// -(UIColor * _Nullable)backgroundColorForState:(UIControlState)state;
 		[Export ("backgroundColorForState:")]
 		[return: NullAllowed]

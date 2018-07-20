@@ -11,7 +11,7 @@ namespace MaterialComponents
 {
 	// @interface MDCTextInputControllerFullWidth : NSObject <MDCTextInputController>
 	[BaseType (typeof(NSObject))]
-	interface MDCTextInputControllerFullWidth : IMDCTextInputController
+	interface MDCTextInputControllerFullWidth : MDCTextInputController
 	{
 	}
 }

@@ -5,8 +5,10 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="CommandLineArgumentsParser" Version="3.0.18" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Definitions\" />
+    <Folder Include="Config\" />
   </ItemGroup>
 </Project>

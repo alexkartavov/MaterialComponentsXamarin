@@ -11,7 +11,7 @@ namespace MaterialComponents
 {
 	// @interface MDCTextInputAllCharactersCounter : NSObject <MDCTextInputCharacterCounter>
 	[BaseType (typeof(NSObject))]
-	interface MDCTextInputAllCharactersCounter : IMDCTextInputCharacterCounter
+	interface MDCTextInputAllCharactersCounter : MDCTextInputCharacterCounter
 	{
 	}
 }

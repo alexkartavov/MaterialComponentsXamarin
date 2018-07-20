@@ -11,6 +11,7 @@ namespace MaterialComponents
 {
 	// @protocol MDCColorScheming
 	[Protocol, Model]
+    [BaseType(typeof(NSObject))]
 	interface MDCColorScheming
 	{
 		// @required @property (readonly, nonatomic) UIColor * _Nonnull primaryColor;

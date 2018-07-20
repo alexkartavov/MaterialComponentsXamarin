@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace PostSharpie
 {
@@ -134,10 +136,20 @@ namespace PostSharpie
 
         private void WriteDefinition(string outputFolder, string ns, IDefinition def)
         {
-            if (!string.IsNullOrEmpty(def.Name))
+            if (!string.IsNullOrEmpty(def.Name) && def.Active)
             {
                 if (!outputFolder.EndsWith('/'))
                     outputFolder += '/';
+
+                Console.WriteLine("Writing file: {0}", outputFolder + def.Name + ".cs");
+                if (File.Exists(outputFolder + def.Name + ".cs"))
+                {
+                    var c = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Already exists");
+                    Console.ForegroundColor = c;
+                    return;
+                }
 
                 using (var streamWriter = new StreamWriter(outputFolder + def.Name + ".cs"))
                 {
@@ -272,22 +284,15 @@ namespace PostSharpie
             var bindingsApiDef = new StringBuilder();
             var bindingsCoreDef = new StringBuilder();
 
-            foreach (var def in Definitions)
+            foreach (var def in Definitions.Where(d => !string.IsNullOrEmpty(d.Name) && d.Active))
             {
-                if (!string.IsNullOrWhiteSpace(def.Name))
+                if (def is ApiDefinition)
                 {
-                    if (def is ApiDefinition)
-                    {
-                        bindingsApiDef.AppendLine("\t" + string.Format(_bindingApiDef, def.Name + ".cs"));
-                    }
-                    else if (def is EnumDefinition || def is StructDefinition)
-                    {
-                        bindingsCoreDef.AppendLine("\t" + string.Format(_bindingCoreTmpl, def.Name + ".cs")); ;
-                    }
+                    bindingsApiDef.AppendLine("\t" + string.Format(_bindingApiDef, def.Name + ".cs"));
                 }
-                else
+                else if (def is EnumDefinition || def is StructDefinition)
                 {
-                    
+                    bindingsCoreDef.AppendLine("\t" + string.Format(_bindingCoreTmpl, def.Name + ".cs")); ;
                 }
             }
 
@@ -300,5 +305,60 @@ namespace PostSharpie
         }
 
         #endregion //Output Project
+
+        #region JSON config
+
+        // MDCControl: {
+        //   Biding: boolean - to indicate whether this binding needs to be generated.
+        //   XFormsWrapper: boolean - to indicate that a wrapper needs to be created. Only a subset of bindings will get that.
+        //   BindableProperties: { - to list properties that are bindable and to generate renderers that copy values from Element to Control
+        //      list of properties
+        //   }
+        //   Events: {
+        //      list of events to propagate between renderer's Element and Control
+        //   }
+        // }
+        internal void UpdateOrCreateConfig(string outputFolder, string configFile)
+        {
+            var dir = new DirectoryInfo(outputFolder);
+            dir.Create();
+
+            List<Binding> bindings = (File.Exists(dir.FullName + "/" + configFile)
+                                      ? JsonConvert.DeserializeObject<List<Binding>>(File.ReadAllText(dir.FullName + "/" + configFile))
+                                      : new List<Binding>());
+
+            foreach (var def in Definitions.Where(d => !string.IsNullOrEmpty(d.Name)))
+            {
+                var binding = bindings.FirstOrDefault(b => b.Name == def.Name);
+                if (binding == null)
+                {
+                    binding = new Binding()
+                    {
+                        Name = def.Name,
+                        EnableBinding = def.Active,
+                        EnableXFWrapper = false
+                    };
+
+                    bindings.Add(binding);
+                }
+                else
+                {
+                    def.Active = binding.EnableBinding;
+                }
+            }
+
+            File.WriteAllText(dir.FullName + "/" + configFile, JsonConvert.SerializeObject(bindings, Formatting.Indented));
+        }
+
+        #endregion //JSON config
+
+        #region Xamarin Forms wrappers
+
+        internal void WriteXFWrappers(string fullName, string defaultConfigName)
+        {
+            
+        }
+
+        #endregion //Xamarin Forms Wrappers
     }
 }

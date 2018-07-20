@@ -11,7 +11,8 @@ namespace MaterialComponents
 {
 	// @protocol MDCMultilineTextInput <MDCTextInput>
 	[Protocol, Model]
-	interface MDCMultilineTextInput : IMDCTextInput
+    [BaseType(typeof(NSObject))]
+	interface MDCMultilineTextInput : MDCTextInput
 	{
 		// @required @property (assign, nonatomic) BOOL expandsOnOverflow;
 		[Abstract]

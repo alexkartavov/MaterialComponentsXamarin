@@ -12,7 +12,7 @@ namespace MaterialComponents
 	// @protocol MDCTextInputController <NSObject, NSSecureCoding, NSCopying, MDCTextInputPositioningDelegate>
 	[Protocol, Model]
 	[BaseType (typeof(NSObject))]
-	interface MDCTextInputController : INSSecureCoding, INSCopying, IMDCTextInputPositioningDelegate
+	interface MDCTextInputController : INSSecureCoding, INSCopying, MDCTextInputPositioningDelegate
 	{
 		// @required @property (nonatomic, strong) UIColor * _Null_unspecified activeColor;
 		[Abstract]
@@ -179,7 +179,7 @@ namespace MaterialComponents
 		[Export ("underlineViewModeDefault", ArgumentSemantic.Assign)]
 		UITextFieldViewMode UnderlineViewModeDefault { get; set; }
 		// @required -(instancetype _Nonnull)initWithTextInput:(UIView<MDCTextInput> * _Nullable)input;
-		[Abstract]
+		//[Abstract]
 		[Export ("initWithTextInput:")]
 		IntPtr Constructor ([NullAllowed] MDCTextInput input);
 		// @required -(void)setErrorText:(NSString * _Nullable)errorText errorAccessibilityValue:(NSString * _Nullable)errorAccessibilityValue;
