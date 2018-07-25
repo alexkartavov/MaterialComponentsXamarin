@@ -12,6 +12,9 @@ namespace PostSharpie
         static readonly string DefaultNamespace = "MaterialComponents";
         static readonly string DefaultProject = "MaterialComponents";
         static readonly string DefaultConfigName = "MDCConfing.json";
+        static readonly string DefaultXfFolder = "XamarinForms";
+        static readonly string DefaultIOSFolder = "XamarinForms.iOS";
+        static readonly string DefaultAndroidFolder = "XamarinForms.Android";
 
         static void Main(string[] args)
         {
@@ -44,6 +47,13 @@ namespace PostSharpie
                 if (helpArgument.Parsed && helpArgument.Value)
                 {
                     parser.ShowUsage();
+                    Console.WriteLine(@"First step is to generate a config file:
+dotnet run -- -i ../Bindings/ -o ../MaterialComponents.Parsed/ -c
+
+Second step is to edit the config file and set EnableBinding and EnableXFWrapper for desired components.
+
+Third step is to generate separated ObjC wrappers and Xamarin Forms wrappers/renderers:
+dotnet run -- -i ../Bindings/ -o ../MaterialComponents.Parsed/ -n MaterialComponents");
                 }
             }
             catch (CommandLineException e)
@@ -82,11 +92,16 @@ namespace PostSharpie
             if (!cfgOnly)
             {
                 // Using JSON config create bindings
-                sharpieParser.WriteOutput(outputFolder.FullName, ns);
-                sharpieParser.WriteProject(outputFolder.FullName, DefaultProject);
+                sharpieParser.WriteOutput(outputFolder.FullName + "/Components/", ns);
+                sharpieParser.WriteProject(outputFolder.FullName + "/Components/", DefaultProject);
 
                 // Using JSON config generates XF wrappers
-                sharpieParser.WriteXFWrappers(outputFolder.FullName, DefaultConfigName);
+                sharpieParser.WriteXFWrappers(outputFolder.FullName, 
+                                              DefaultConfigName, 
+                                              DefaultXfFolder, 
+                                              DefaultIOSFolder, 
+                                              DefaultAndroidFolder,
+                                              DefaultNamespace);
             }
 
         }

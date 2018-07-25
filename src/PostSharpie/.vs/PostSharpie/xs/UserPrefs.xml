@@ -1,20 +1,16 @@
 ﻿<Properties StartupConfiguration="{4A9808D3-8095-4CA5-A516-952C4BC2EDD2}|Default">
   <MonoDevelop.Ide.ItemProperties.PostSharpie PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../MaterialComponents.Parsed/MDCTypographyScheming.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../MaterialComponents.Parsed/Components/MDCFloatingButton.cs">
     <Files>
-      <File FileName="../MaterialComponents.Parsed/MDCTextInput.cs" Line="77" Column="48" />
-      <File FileName="../MaterialComponents.Parsed/MDCTonalPalette.cs" Line="45" Column="40" />
-      <File FileName="../MaterialComponents/MaterialThemes.cs" Line="109" Column="24" />
-      <File FileName="../MaterialComponents.Parsed/obj/Debug/ios/MaterialComponents/MDCFloatingButton.g.cs" Line="133" Column="10" />
-      <File FileName="../MaterialComponents.Parsed/MDCFloatingButton.cs" Line="49" Column="43" />
-      <File FileName="../MaterialComponents.Parsed/obj/Debug/ios/MaterialComponents/MDCTextField.g.cs" Line="96" Column="37" />
-      <File FileName="../MaterialComponents.Parsed/MDCTextField.cs" Line="12" Column="4" />
-      <File FileName="../MaterialComponents.Parsed/obj/Debug/ios/MaterialComponents/MDCOutlinedButtonColorThemer.g.cs" Line="82" Column="48" />
-      <File FileName="../MaterialComponents.Parsed/MDCColorScheming.cs" Line="15" Column="1" />
-      <File FileName="../MaterialComponents.Parsed/obj/Debug/ios/MaterialComponents/MDCMultilineTextInputLayoutDelegate.g.cs" Line="102" Column="45" />
-      <File FileName="../MaterialComponents.Parsed/MDCMultilineTextInput.cs" Line="15" Column="1" />
-      <File FileName="../MaterialComponents/MaterialTextFields.cs" Line="145" Column="1" />
-      <File FileName="../MaterialComponents.Parsed/MDCTypographyScheming.cs" Line="14" Column="1" />
+      <File FileName="Config/Binding.cs" Line="120" Column="75" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MaterialActivityIndicatorRenderer.cs" Line="31" Column="18" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/Components/MDCActivityIndicator.cs" Line="41" Column="69" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCButton.cs" Line="113" Column="26" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/Components/MDCButton.cs" Line="80" Column="76" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/Components/MDCActivityIndicatorMode.cs" Line="11" Column="1" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/Components1/XfMaterialFloatingButton.cs" Line="1" Column="1" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MaterialFloatingButtonRenderer.cs" Line="1" Column="1" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCFloatingButton.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

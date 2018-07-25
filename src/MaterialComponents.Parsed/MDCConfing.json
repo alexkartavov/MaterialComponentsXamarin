@@ -2,8 +2,34 @@
   {
     "Name": "MDCActivityIndicator",
     "EnableBinding": true,
-    "EnableXFWrapper": false,
-    "BindableProperties": null,
+    "EnableXFWrapper": true,
+    "BindableProperties": [
+      {
+        "Name": "Animating",
+        "Type": "bool",
+        "DefaultValue": "false"
+      },
+      {
+        "Name": "Radius",
+        "Type": "double",
+        "DefaultValue": "0.0"
+      },
+      {
+        "Name": "StrokeWidth",
+        "Type": "double",
+        "DefaultValue": "0.0"
+      },
+      {
+        "Name": "IndicatorMode",
+        "Type": "MDCActivityIndicatorMode",
+        "DefaultValue": "MDCActivityIndicatorMode.Indeterminate"
+      },
+      {
+        "Name": "CycleColors",
+        "Type": "Color[]",
+        "DefaultValue": "null"
+      }
+    ],
     "Events": null
   },
   {
@@ -324,21 +350,72 @@
   {
     "Name": "MDCButton",
     "EnableBinding": true,
-    "EnableXFWrapper": false,
-    "BindableProperties": null,
+    "EnableXFWrapper": true,
+    "BindableProperties": [
+      {
+        "Name": "InkColor",
+        "Type": "Color",
+        "DefaultValue": "null"
+      },
+      {
+        "Name": "InkMaxRippleRadius",
+        "Type": "double",
+        "DefaultValue": "0.0"
+      },
+      {
+        "Name": "DisabledAlpha",
+        "Type": "double",
+        "DefaultValue": "0.0"
+      },
+      {
+        "Name": "MinimumSize",
+        "Type": "Size",
+        "DefaultValue": "null"
+      },
+      {
+        "Name": "MaximumSize",
+        "Type": "Size",
+        "DefaultValue": "null"
+      },
+      {
+        "Name": "MaximumUnderlyingColorHintSize",
+        "Type": "Color",
+        "DefaultValue": "null"
+      },
+      {
+        "Name": "CustomTitleColor",
+        "Type": "Color",
+        "DefaultValue": "null"
+      },
+      {
+        "Name": "ShouldRaiseOnTouch",
+        "Type": "bool",
+        "DefaultValue": "false"
+      },
+      {
+        "Name": "ShouldCapitalizeTitle",
+        "Type": "bool",
+        "DefaultValue": "false"
+      },
+      {
+        "Name": "UnderlyingColor",
+        "Type": "Color",
+        "DefaultValue": "null"
+      }
+    ],
     "Events": null
   },
   {
     "Name": "MDCFlatButton",
     "EnableBinding": true,
-    "EnableXFWrapper": false,
+    "EnableXFWrapper": true,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFloatingButton",
     "EnableBinding": true,
-    "EnableXFWrapper": false,
+    "EnableXFWrapper": true,
     "BindableProperties": null,
     "Events": null
   },
@@ -352,7 +429,7 @@
   {
     "Name": "MDCRaisedButton",
     "EnableBinding": true,
-    "EnableXFWrapper": false,
+    "EnableXFWrapper": true,
     "BindableProperties": null,
     "Events": null
   },
@@ -639,28 +716,28 @@
   {
     "Name": "MDCIntrinsicHeightTextView",
     "EnableBinding": true,
-    "EnableXFWrapper": false,
+    "EnableXFWrapper": true,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTextInput",
     "EnableBinding": true,
-    "EnableXFWrapper": false,
+    "EnableXFWrapper": true,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCMultilineTextInput",
     "EnableBinding": true,
-    "EnableXFWrapper": false,
+    "EnableXFWrapper": true,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCMultilineTextField",
     "EnableBinding": true,
-    "EnableXFWrapper": false,
+    "EnableXFWrapper": true,
     "BindableProperties": null,
     "Events": null
   },
@@ -681,7 +758,7 @@
   {
     "Name": "MDCTextField",
     "EnableBinding": true,
-    "EnableXFWrapper": false,
+    "EnableXFWrapper": true,
     "BindableProperties": null,
     "Events": null
   },
@@ -779,7 +856,7 @@
   {
     "Name": "MDCTextInputUnderlineView",
     "EnableBinding": true,
-    "EnableXFWrapper": false,
+    "EnableXFWrapper": true,
     "BindableProperties": null,
     "Events": null
   },
@@ -1080,7 +1157,7 @@
   {
     "Name": "MDCProgressView",
     "EnableBinding": true,
-    "EnableXFWrapper": false,
+    "EnableXFWrapper": true,
     "BindableProperties": null,
     "Events": null
   },
@@ -1094,7 +1171,7 @@
   {
     "Name": "MDCSlider",
     "EnableBinding": true,
-    "EnableXFWrapper": false,
+    "EnableXFWrapper": true,
     "BindableProperties": null,
     "Events": null
   },
@@ -1262,7 +1339,7 @@
   {
     "Name": "MDCTextInputBorderView",
     "EnableBinding": true,
-    "EnableXFWrapper": false,
+    "EnableXFWrapper": true,
     "BindableProperties": null,
     "Events": null
   },

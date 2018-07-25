@@ -1,0 +1,144 @@
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F888B10B-1D2E-44F5-AAE9-3335566E67A7}</ProjectGuid>
+    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MaterialComponents</RootNamespace>
+    <AssemblyName>MaterialComponents</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <ReleaseVersion>39.0.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile></DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>CS0108;CS0114;MSB9004</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+	<ObjcBindingApiDefinition Include="MDCActivityIndicator.cs" />
+	<ObjcBindingApiDefinition Include="MDCActivityIndicatorDelegate.cs" />
+	<ObjcBindingApiDefinition Include="MDCActivityIndicatorTransition.cs" />
+	<ObjcBindingApiDefinition Include="MDCColorScheme.cs" />
+	<ObjcBindingApiDefinition Include="MDCBasicColorScheme.cs" />
+	<ObjcBindingApiDefinition Include="MDCTonalColorScheme.cs" />
+	<ObjcBindingApiDefinition Include="MDCTonalPalette.cs" />
+	<ObjcBindingApiDefinition Include="MDCColorScheming.cs" />
+	<ObjcBindingApiDefinition Include="MDCSemanticColorScheme.cs" />
+	<ObjcBindingApiDefinition Include="MDCActivityIndicatorColorThemer.cs" />
+	<ObjcBindingApiDefinition Include="MDCFontScheme.cs" />
+	<ObjcBindingApiDefinition Include="MDCTypographyScheming.cs" />
+	<ObjcBindingApiDefinition Include="MDCTypographyScheme.cs" />
+	<ObjcBindingApiDefinition Include="MDCButton.cs" />
+	<ObjcBindingApiDefinition Include="MDCFlatButton.cs" />
+	<ObjcBindingApiDefinition Include="MDCFloatingButton.cs" />
+	<ObjcBindingApiDefinition Include="MDCFloatingButton_Animation.cs" />
+	<ObjcBindingApiDefinition Include="MDCRaisedButton.cs" />
+	<ObjcBindingApiDefinition Include="MDCButtonColorThemer.cs" />
+	<ObjcBindingApiDefinition Include="MDCContainedButtonColorThemer.cs" />
+	<ObjcBindingApiDefinition Include="MDCFloatingButtonColorThemer.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextButtonColorThemer.cs" />
+	<ObjcBindingApiDefinition Include="MDCOutlinedButtonColorThemer.cs" />
+	<ObjcBindingApiDefinition Include="MDCButtonTitleColorAccessibilityMutator.cs" />
+	<ObjcBindingApiDefinition Include="MDCButtonTypographyThemer.cs" />
+	<ObjcBindingApiDefinition Include="MDCIntrinsicHeightTextView.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInput.cs" />
+	<ObjcBindingApiDefinition Include="MDCMultilineTextInput.cs" />
+	<ObjcBindingApiDefinition Include="MDCMultilineTextField.cs" />
+	<ObjcBindingApiDefinition Include="MDCMultilineTextInputLayoutDelegate.cs" />
+	<ObjcBindingApiDefinition Include="MDCMultilineTextInputDelegate.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextField.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputPositioningDelegate.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputCharacterCounter.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputAllCharactersCounter.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputController.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputControllerFloatingPlaceholder.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputControllerBase.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputControllerFilled.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputControllerFullWidth.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputControllerLegacyDefault.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputControllerLegacyFullWidth.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputControllerOutlined.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputControllerOutlinedTextArea.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputControllerUnderline.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputUnderlineView.cs" />
+	<ObjcBindingApiDefinition Include="MDCProgressView.cs" />
+	<ObjcBindingApiDefinition Include="MDCProgressViewColorThemer.cs" />
+	<ObjcBindingApiDefinition Include="MDCSlider.cs" />
+	<ObjcBindingApiDefinition Include="MDCSliderDelegate.cs" />
+	<ObjcBindingApiDefinition Include="MDCSliderColorThemer.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextInputBorderView.cs" />
+	<ObjcBindingApiDefinition Include="MDCFilledTextFieldColorThemer.cs" />
+	<ObjcBindingApiDefinition Include="MDCOutlinedTextFieldColorThemer.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextFieldColorThemer.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextFieldFontThemer.cs" />
+	<ObjcBindingApiDefinition Include="MDCTextFieldTypographyThemer.cs" />
+	<ObjcBindingApiDefinition Include="MDCTypographyFontLoading.cs" />
+	<ObjcBindingApiDefinition Include="MDCTypography.cs" />
+	<ObjcBindingApiDefinition Include="MDCSystemFontLoader.cs" />
+	<ObjcBindingApiDefinition Include="UIFont_MaterialTypography.cs" />
+	<ObjcBindingApiDefinition Include="UIFontDescriptor_MaterialTypography.cs" />
+
+  </ItemGroup>
+  <ItemGroup>
+	<ObjcBindingCoreSource Include="MDCActivityIndicatorMode.cs" />
+	<ObjcBindingCoreSource Include="MDCColorSchemeDefaults.cs" />
+	<ObjcBindingCoreSource Include="MDCTypographySchemeDefaults.cs" />
+	<ObjcBindingCoreSource Include="MDCInkStyle.cs" />
+	<ObjcBindingCoreSource Include="MDCFloatingButtonShape.cs" />
+	<ObjcBindingCoreSource Include="MDCFloatingButtonMode.cs" />
+	<ObjcBindingCoreSource Include="MDCFloatingButtonImageLocation.cs" />
+	<ObjcBindingCoreSource Include="MDCTextInputTextInsetsMode.cs" />
+	<ObjcBindingCoreSource Include="MDCProgressViewBackwardAnimationMode.cs" />
+	<ObjcBindingCoreSource Include="MDCFontTextStyle.cs" />
+
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include="..\..\references.55\MDFTextAccessibility.framework">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include="..\..\references.55\MotionAnimator.framework">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include="..\..\references.55\MotionInterchange.framework">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include="..\..\references.55\MotionTransitioning.framework">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include="..\..\references.55\MaterialComponents.framework">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include="..\..\references\MDFInternationalization.framework">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+</Project>

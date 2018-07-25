@@ -354,9 +354,35 @@ namespace PostSharpie
 
         #region Xamarin Forms wrappers
 
-        internal void WriteXFWrappers(string fullName, string defaultConfigName)
+        internal void WriteXFWrappers(string outputFolder, string configFile, string xfFolder, string iosFolder, string androidFolder, string ns)
         {
-            
+            var dir = new DirectoryInfo(outputFolder);
+            dir.Create();
+
+            var xfDir = new DirectoryInfo(dir.FullName + "/" + xfFolder);
+            xfDir.Create();
+
+            var iosDir = new DirectoryInfo(dir.FullName + "/" + iosFolder);
+            iosDir.Create();
+
+            var androidDir = new DirectoryInfo(dir.FullName + "/" + androidFolder);
+            androidDir.Create();
+
+            List<Binding> bindings = (File.Exists(dir.FullName + "/" + configFile)
+                                      ? JsonConvert.DeserializeObject<List<Binding>>(File.ReadAllText(dir.FullName + "/" + configFile))
+                                      : new List<Binding>());
+
+            foreach (var binding in bindings.Where(b => b.EnableXFWrapper))
+            {
+                binding.GenerateXfWrapperWithBindableProperties(xfDir.FullName, ns);
+                binding.GenerateIOSRenderer(iosDir.FullName, ns);
+                binding.GenerateAndroidRenderer(androidDir.FullName, ns);
+            }
+
+            //if (bindings.Count > 0)
+            //{
+            //    this.GenerateXfProject();
+            //}
         }
 
         #endregion //Xamarin Forms Wrappers

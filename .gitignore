@@ -42,3 +42,7 @@ Thumbs.db
 # -e
 *.cs-e
 *.nupkg
+
+# Visual Studio
+.vs/
+*.vs/
