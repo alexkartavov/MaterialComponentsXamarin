@@ -64,6 +64,13 @@ public enum MDCNavigationBarTitleAlignment : nint
 }
 
 [Native]
+public enum MDCNavigationBarTitleViewLayoutBehavior : nint
+{
+	Fill,
+	Center
+}
+
+[Native]
 public enum MDCTypographySchemeDefaults : nint
 {
 	MDCTypographySchemeDefaultsMaterial201804
@@ -126,6 +133,14 @@ public enum MDCBottomNavigationBarAlignment : nint
 	Justified = 0,
 	JustifiedAdjacentTitles = 1,
 	Centered = 2
+}
+
+[Native]
+public enum MDCSheetState : nuint
+{
+	Closed,
+	Preferred,
+	Extended
 }
 
 [Native]
@@ -226,11 +241,23 @@ public enum MDCCollectionViewCellLayoutType : nuint
 	Custom
 }
 
+public enum MaterialFeatureHighlightStringId : uint
+{
+	Str_MaterialFeatureHighlightDismissAccessibilityHint = 0
+}
+
 [Native]
 public enum MDCProgressViewBackwardAnimationMode : nint
 {
 	Reset,
 	Animate
+}
+
+[Native]
+public enum MDCSnackbarAlignment : nint
+{
+	Center = 0,
+	Leading = 1
 }
 
 [Native]
@@ -313,7 +340,7 @@ static class CFunctions
 	[Verify (PlatformInvoke)]
 	static extern nfloat MDCDegreesToRadians (nfloat degrees);
 
-	// _Bool MDCCGFloatEqual (CGFloat a, CGFloat b);
+	// BOOL MDCCGFloatEqual (CGFloat a, CGFloat b);
 	[DllImport ("__Internal")]
 	[Verify (PlatformInvoke)]
 	static extern bool MDCCGFloatEqual (nfloat a, nfloat b);

@@ -19,7 +19,7 @@ namespace MaterialComponents.Forms
         }
 
         public static readonly BindableProperty RadiusProperty =
-            BindableProperty.Create("Radius", typeof(double), typeof(XfMDCActivityIndicator), 0.0);
+            BindableProperty.Create("Radius", typeof(double), typeof(XfMDCActivityIndicator), default(double));
 
         public double Radius
         {
@@ -28,7 +28,7 @@ namespace MaterialComponents.Forms
         }
 
         public static readonly BindableProperty StrokeWidthProperty =
-            BindableProperty.Create("StrokeWidth", typeof(double), typeof(XfMDCActivityIndicator), 0.0);
+            BindableProperty.Create("StrokeWidth", typeof(double), typeof(XfMDCActivityIndicator), default(double));
 
         public double StrokeWidth
         {

@@ -439,6 +439,10 @@ interface MDCFlexibleHeaderContainerViewController
 	// @property (nonatomic, strong) UIViewController * _Nullable contentViewController;
 	[NullAllowed, Export ("contentViewController", ArgumentSemantic.Strong)]
 	UIViewController ContentViewController { get; set; }
+
+	// @property (getter = isTopLayoutGuideAdjustmentEnabled, nonatomic) BOOL topLayoutGuideAdjustmentEnabled;
+	[Export ("topLayoutGuideAdjustmentEnabled")]
+	bool TopLayoutGuideAdjustmentEnabled { [Bind ("isTopLayoutGuideAdjustmentEnabled")] get; set; }
 }
 
 // typedef void (^MDCFlexibleHeaderChangeContentInsetsBlock)();
@@ -646,6 +650,14 @@ interface MDCFlexibleHeaderViewController : IUIScrollViewDelegate, IUITableViewD
 	[NullAllowed, Export ("layoutDelegate", ArgumentSemantic.Weak)]
 	NSObject WeakLayoutDelegate { get; set; }
 
+	// @property (getter = isTopLayoutGuideAdjustmentEnabled, nonatomic) BOOL topLayoutGuideAdjustmentEnabled;
+	[Export ("topLayoutGuideAdjustmentEnabled")]
+	bool TopLayoutGuideAdjustmentEnabled { [Bind ("isTopLayoutGuideAdjustmentEnabled")] get; set; }
+
+	// @property (nonatomic, weak) UIViewController * _Nullable topLayoutGuideViewController;
+	[NullAllowed, Export ("topLayoutGuideViewController", ArgumentSemantic.Weak)]
+	UIViewController TopLayoutGuideViewController { get; set; }
+
 	// -(BOOL)prefersStatusBarHidden;
 	[Export ("prefersStatusBarHidden")]
 	[Verify (MethodToProperty)]
@@ -655,10 +667,6 @@ interface MDCFlexibleHeaderViewController : IUIScrollViewDelegate, IUITableViewD
 	[Export ("preferredStatusBarStyle")]
 	[Verify (MethodToProperty)]
 	UIStatusBarStyle PreferredStatusBarStyle { get; }
-
-	// -(void)updateTopLayoutGuide;
-	[Export ("updateTopLayoutGuide")]
-	void UpdateTopLayoutGuide ();
 }
 
 // @protocol MDCFlexibleHeaderViewLayoutDelegate <NSObject>
@@ -670,6 +678,16 @@ interface MDCFlexibleHeaderViewLayoutDelegate
 	[Abstract]
 	[Export ("flexibleHeaderViewController:flexibleHeaderViewFrameDidChange:")]
 	void FlexibleHeaderViewFrameDidChange (MDCFlexibleHeaderViewController flexibleHeaderViewController, MDCFlexibleHeaderView flexibleHeaderView);
+}
+
+// @interface ToBeDeprecated (MDCFlexibleHeaderViewController)
+[Category]
+[BaseType (typeof(MDCFlexibleHeaderViewController))]
+interface MDCFlexibleHeaderViewController_ToBeDeprecated
+{
+	// -(void)updateTopLayoutGuide;
+	[Export ("updateTopLayoutGuide")]
+	void UpdateTopLayoutGuide ();
 }
 
 // @interface MDCHeaderStackView : UIView
@@ -751,6 +769,10 @@ interface MDCNavigationBar
 	// @property (nonatomic, strong) UIView * _Nullable titleView;
 	[NullAllowed, Export ("titleView", ArgumentSemantic.Strong)]
 	UIView TitleView { get; set; }
+
+	// @property (nonatomic) MDCNavigationBarTitleViewLayoutBehavior titleViewLayoutBehavior;
+	[Export ("titleViewLayoutBehavior", ArgumentSemantic.Assign)]
+	MDCNavigationBarTitleViewLayoutBehavior TitleViewLayoutBehavior { get; set; }
 
 	// @property (nonatomic, strong) UIFont * _Null_unspecified titleFont;
 	[Export ("titleFont", ArgumentSemantic.Strong)]
@@ -842,10 +864,6 @@ interface MDCNavigationBar
 	[Export ("leftItemsSupplementBackButton")]
 	bool LeftItemsSupplementBackButton { get; set; }
 
-	// @property (nonatomic) BOOL useFlexibleTopBottomInsets;
-	[Export ("useFlexibleTopBottomInsets")]
-	bool UseFlexibleTopBottomInsets { get; set; }
-
 	// @property (copy, nonatomic) NSDictionary<NSAttributedStringKey,id> * _Nullable titleTextAttributes __attribute__((annotate("ui_appearance_selector")));
 	[NullAllowed, Export ("titleTextAttributes", ArgumentSemantic.Copy)]
 	NSDictionary<NSString, NSObject> TitleTextAttributes { get; set; }
@@ -902,6 +920,10 @@ interface MDCAppBarContainerViewController
 	// @property (readonly, nonatomic, strong) UIViewController * _Nonnull contentViewController;
 	[Export ("contentViewController", ArgumentSemantic.Strong)]
 	UIViewController ContentViewController { get; }
+
+	// @property (getter = isTopLayoutGuideAdjustmentEnabled, nonatomic) BOOL topLayoutGuideAdjustmentEnabled;
+	[Export ("topLayoutGuideAdjustmentEnabled")]
+	bool TopLayoutGuideAdjustmentEnabled { [Bind ("isTopLayoutGuideAdjustmentEnabled")] get; set; }
 }
 
 // @interface MDCAppBarColorThemer : NSObject
@@ -1392,6 +1414,10 @@ partial interface Constants
 	// extern const MDCShadowElevation MDCShadowElevationAppBar;
 	[Field ("MDCShadowElevationAppBar", "__Internal")]
 	double MDCShadowElevationAppBar { get; }
+
+	// extern const MDCShadowElevation MDCShadowElevationBottomNavigationBar;
+	[Field ("MDCShadowElevationBottomNavigationBar", "__Internal")]
+	double MDCShadowElevationBottomNavigationBar { get; }
 
 	// extern const MDCShadowElevation MDCShadowElevationCardPickedUp;
 	[Field ("MDCShadowElevationCardPickedUp", "__Internal")]
@@ -2077,6 +2103,18 @@ interface MDCBottomNavigationBar
 	// @property (copy, nonatomic) UIColor * _Nullable backgroundColor __attribute__((annotate("ui_appearance_selector")));
 	[NullAllowed, Export ("backgroundColor", ArgumentSemantic.Copy)]
 	UIColor BackgroundColor { get; set; }
+
+	// @property (assign, nonatomic) UIEdgeInsets itemsContentInsets;
+	[Export ("itemsContentInsets", ArgumentSemantic.Assign)]
+	UIEdgeInsets ItemsContentInsets { get; set; }
+
+	// @property (assign, nonatomic) CGFloat itemsContentVerticalMargin;
+	[Export ("itemsContentVerticalMargin")]
+	nfloat ItemsContentVerticalMargin { get; set; }
+
+	// @property (assign, nonatomic) CGFloat itemsContentHorizontalMargin;
+	[Export ("itemsContentHorizontalMargin")]
+	nfloat ItemsContentHorizontalMargin { get; set; }
 }
 
 // @protocol MDCBottomNavigationBarDelegate <UINavigationBarDelegate>
@@ -2133,6 +2171,22 @@ interface MDCBottomSheetController
 	[Export ("dismissOnBackgroundTap")]
 	bool DismissOnBackgroundTap { get; set; }
 
+	// @property (assign, nonatomic) BOOL isScrimAccessibilityElement;
+	[Export ("isScrimAccessibilityElement")]
+	bool IsScrimAccessibilityElement { get; set; }
+
+	// @property (copy, nonatomic) NSString * _Nullable scrimAccessibilityLabel;
+	[NullAllowed, Export ("scrimAccessibilityLabel")]
+	string ScrimAccessibilityLabel { get; set; }
+
+	// @property (copy, nonatomic) NSString * _Nullable scrimAccessibilityHint;
+	[NullAllowed, Export ("scrimAccessibilityHint")]
+	string ScrimAccessibilityHint { get; set; }
+
+	// @property (assign, nonatomic) UIAccessibilityTraits scrimAccessibilityTraits;
+	[Export ("scrimAccessibilityTraits")]
+	ulong ScrimAccessibilityTraits { get; set; }
+
 	[Wrap ("WeakDelegate")]
 	[NullAllowed]
 	MDCBottomSheetControllerDelegate Delegate { get; set; }
@@ -2140,6 +2194,19 @@ interface MDCBottomSheetController
 	// @property (nonatomic, weak) id<MDCBottomSheetControllerDelegate> _Nullable delegate;
 	[NullAllowed, Export ("delegate", ArgumentSemantic.Weak)]
 	NSObject WeakDelegate { get; set; }
+
+	// @property (readonly, nonatomic) MDCSheetState state;
+	[Export ("state")]
+	MDCSheetState State { get; }
+
+	// -(void)setShapeGenerator:(id<MDCShapeGenerating> _Nullable)shapeGenerator forState:(MDCSheetState)state;
+	[Export ("setShapeGenerator:forState:")]
+	void SetShapeGenerator ([NullAllowed] MDCShapeGenerating shapeGenerator, MDCSheetState state);
+
+	// -(id<MDCShapeGenerating> _Nullable)shapeGeneratorForState:(MDCSheetState)state;
+	[Export ("shapeGeneratorForState:")]
+	[return: NullAllowed]
+	MDCShapeGenerating ShapeGeneratorForState (MDCSheetState state);
 
 	// -(instancetype _Nonnull)initWithContentViewController:(UIViewController * _Nonnull)contentViewController;
 	[Export ("initWithContentViewController:")]
@@ -2168,6 +2235,10 @@ interface MDCBottomSheetPresentationControllerDelegate : IUIAdaptivePresentation
 	// @optional -(void)bottomSheetPresentationControllerDidDismissBottomSheet:(MDCBottomSheetPresentationController * _Nonnull)bottomSheet;
 	[Export ("bottomSheetPresentationControllerDidDismissBottomSheet:")]
 	void BottomSheetPresentationControllerDidDismissBottomSheet (MDCBottomSheetPresentationController bottomSheet);
+
+	// @optional -(void)bottomSheetWillChangeState:(MDCBottomSheetPresentationController * _Nonnull)bottomSheet sheetState:(MDCSheetState)sheetState;
+	[Export ("bottomSheetWillChangeState:sheetState:")]
+	void BottomSheetWillChangeState (MDCBottomSheetPresentationController bottomSheet, MDCSheetState sheetState);
 }
 
 // @interface MDCBottomSheetPresentationController : UIPresentationController
@@ -2181,6 +2252,22 @@ interface MDCBottomSheetPresentationController
 	// @property (assign, nonatomic) BOOL dismissOnBackgroundTap;
 	[Export ("dismissOnBackgroundTap")]
 	bool DismissOnBackgroundTap { get; set; }
+
+	// @property (assign, nonatomic) BOOL isScrimAccessibilityElement;
+	[Export ("isScrimAccessibilityElement")]
+	bool IsScrimAccessibilityElement { get; set; }
+
+	// @property (copy, nonatomic) NSString * _Nullable scrimAccessibilityLabel;
+	[NullAllowed, Export ("scrimAccessibilityLabel")]
+	string ScrimAccessibilityLabel { get; set; }
+
+	// @property (copy, nonatomic) NSString * _Nullable scrimAccessibilityHint;
+	[NullAllowed, Export ("scrimAccessibilityHint")]
+	string ScrimAccessibilityHint { get; set; }
+
+	// @property (assign, nonatomic) UIAccessibilityTraits scrimAccessibilityTraits;
+	[Export ("scrimAccessibilityTraits")]
+	ulong ScrimAccessibilityTraits { get; set; }
 
 	[Wrap ("WeakDelegate")]
 	[NullAllowed]
@@ -2202,6 +2289,28 @@ interface MDCBottomSheetTransitionController : IUIViewControllerAnimatedTransiti
 	// @property (assign, nonatomic) BOOL dismissOnBackgroundTap;
 	[Export ("dismissOnBackgroundTap")]
 	bool DismissOnBackgroundTap { get; set; }
+}
+
+// @interface ScrimAccessibility (MDCBottomSheetTransitionController)
+[Category]
+[BaseType (typeof(MDCBottomSheetTransitionController))]
+interface MDCBottomSheetTransitionController_ScrimAccessibility
+{
+	// @property (assign, nonatomic) BOOL isScrimAccessibilityElement;
+	[Export ("isScrimAccessibilityElement")]
+	bool IsScrimAccessibilityElement { get; set; }
+
+	// @property (copy, nonatomic) NSString * _Nullable scrimAccessibilityLabel;
+	[NullAllowed, Export ("scrimAccessibilityLabel")]
+	string ScrimAccessibilityLabel { get; set; }
+
+	// @property (copy, nonatomic) NSString * _Nullable scrimAccessibilityHint;
+	[NullAllowed, Export ("scrimAccessibilityHint")]
+	string ScrimAccessibilityHint { get; set; }
+
+	// @property (assign, nonatomic) UIAccessibilityTraits scrimAccessibilityTraits;
+	[Export ("scrimAccessibilityTraits")]
+	ulong ScrimAccessibilityTraits { get; set; }
 }
 
 // @interface MaterialBottomSheet (UIViewController)
@@ -2490,6 +2599,10 @@ interface MDCCard
 	[Export ("inkView", ArgumentSemantic.Strong)]
 	MDCInkView InkView { get; }
 
+	// @property (getter = isInteractable, nonatomic) BOOL interactable;
+	[Export ("interactable")]
+	bool Interactable { [Bind ("isInteractable")] get; set; }
+
 	// -(void)setShadowElevation:(MDCShadowElevation)shadowElevation forState:(UIControlState)state __attribute__((annotate("ui_appearance_selector")));
 	[Export ("setShadowElevation:forState:")]
 	void SetShadowElevation (double shadowElevation, UIControlState state);
@@ -2544,6 +2657,10 @@ interface MDCCardCollectionCell
 	// @property (readonly, nonatomic, strong) MDCInkView * _Nonnull inkView;
 	[Export ("inkView", ArgumentSemantic.Strong)]
 	MDCInkView InkView { get; }
+
+	// @property (getter = isInteractable, nonatomic) BOOL interactable;
+	[Export ("interactable")]
+	bool Interactable { [Bind ("isInteractable")] get; set; }
 
 	// @property (nonatomic, strong) id<MDCShapeGenerating> _Nullable shapeGenerator;
 	[NullAllowed, Export ("shapeGenerator", ArgumentSemantic.Strong)]
@@ -2983,6 +3100,21 @@ interface MDCTextInput
 	MDCTextInputUnderlineView Underline { get; }
 }
 
+// @protocol MDCLeadingViewTextInput <MDCTextInput>
+[Protocol, Model]
+interface MDCLeadingViewTextInput : IMDCTextInput
+{
+	// @required @property (nonatomic, strong) UIView * _Nullable leadingView;
+	[Abstract]
+	[NullAllowed, Export ("leadingView", ArgumentSemantic.Strong)]
+	UIView LeadingView { get; set; }
+
+	// @required @property (assign, nonatomic) UITextFieldViewMode leadingViewMode;
+	[Abstract]
+	[Export ("leadingViewMode", ArgumentSemantic.Assign)]
+	UITextFieldViewMode LeadingViewMode { get; set; }
+}
+
 // @protocol MDCMultilineTextInput <MDCTextInput>
 [Protocol, Model]
 interface MDCMultilineTextInput : IMDCTextInput
@@ -3068,10 +3200,14 @@ partial interface Constants
 	NSString MDCTextFieldTextDidSetTextNotification { get; }
 }
 
-// @interface MDCTextField : UITextField <MDCTextInput>
+// @interface MDCTextField : UITextField <MDCTextInput, MDCLeadingViewTextInput>
 [BaseType (typeof(UITextField))]
-interface MDCTextField : IMDCTextInput
+interface MDCTextField : IMDCTextInput, IMDCLeadingViewTextInput
 {
+	// @property (readonly, nonatomic, strong) UILabel * _Nonnull inputLayoutStrut;
+	[Export ("inputLayoutStrut", ArgumentSemantic.Strong)]
+	UILabel InputLayoutStrut { get; }
+
 	// @property (nonatomic, strong) UIView * _Nullable leadingView;
 	[NullAllowed, Export ("leadingView", ArgumentSemantic.Strong)]
 	UIView LeadingView { get; set; }
@@ -3094,6 +3230,15 @@ interface MDCTextInputPositioningDelegate
 	[Export ("editingRectForBounds:defaultRect:")]
 	CGRect EditingRectForBounds (CGRect bounds, CGRect defaultRect);
 
+	// @optional -(CGRect)leadingViewRectForBounds:(CGRect)bounds defaultRect:(CGRect)defaultRect;
+	[Export ("leadingViewRectForBounds:defaultRect:")]
+	CGRect LeadingViewRectForBounds (CGRect bounds, CGRect defaultRect);
+
+	// @optional -(CGFloat)leadingViewTrailingPaddingConstant;
+	[Export ("leadingViewTrailingPaddingConstant")]
+	[Verify (MethodToProperty)]
+	nfloat LeadingViewTrailingPaddingConstant { get; }
+
 	// @optional -(void)textInputDidLayoutSubviews;
 	[Export ("textInputDidLayoutSubviews")]
 	void TextInputDidLayoutSubviews ();
@@ -3101,6 +3246,15 @@ interface MDCTextInputPositioningDelegate
 	// @optional -(void)textInputDidUpdateConstraints;
 	[Export ("textInputDidUpdateConstraints")]
 	void TextInputDidUpdateConstraints ();
+
+	// @optional -(CGRect)trailingViewRectForBounds:(CGRect)bounds defaultRect:(CGRect)defaultRect;
+	[Export ("trailingViewRectForBounds:defaultRect:")]
+	CGRect TrailingViewRectForBounds (CGRect bounds, CGRect defaultRect);
+
+	// @optional -(CGFloat)trailingViewTrailingPaddingConstant;
+	[Export ("trailingViewTrailingPaddingConstant")]
+	[Verify (MethodToProperty)]
+	nfloat TrailingViewTrailingPaddingConstant { get; }
 }
 
 // @protocol MDCTextInputCharacterCounter <NSObject>
@@ -3134,16 +3288,6 @@ interface MDCTextInputController : INSSecureCoding, INSCopying, IMDCTextInputPos
 	[Static, Abstract]
 	[Export ("activeColorDefault", ArgumentSemantic.Strong)]
 	UIColor ActiveColorDefault { get; set; }
-
-	// @required @property (nonatomic, strong) UIColor * _Null_unspecified backgroundColor;
-	[Abstract]
-	[Export ("backgroundColor", ArgumentSemantic.Strong)]
-	UIColor BackgroundColor { get; set; }
-
-	// @required @property (nonatomic, strong, class) UIColor * _Null_unspecified backgroundColorDefault;
-	[Static, Abstract]
-	[Export ("backgroundColorDefault", ArgumentSemantic.Strong)]
-	UIColor BackgroundColorDefault { get; set; }
 
 	// @required @property (nonatomic, weak) id<MDCTextInputCharacterCounter> _Null_unspecified characterCounter;
 	[Abstract]
@@ -3280,6 +3424,16 @@ interface MDCTextInputController : INSSecureCoding, INSCopying, IMDCTextInputPos
 	[NullAllowed, Export ("textInput", ArgumentSemantic.Strong)]
 	MDCTextInput TextInput { get; set; }
 
+	// @required @property (nonatomic, strong) UIColor * _Null_unspecified textInputClearButtonTintColor;
+	[Abstract]
+	[Export ("textInputClearButtonTintColor", ArgumentSemantic.Strong)]
+	UIColor TextInputClearButtonTintColor { get; set; }
+
+	// @required @property (nonatomic, strong, class) UIColor * _Nullable textInputClearButtonTintColorDefault;
+	[Static, Abstract]
+	[NullAllowed, Export ("textInputClearButtonTintColorDefault", ArgumentSemantic.Strong)]
+	UIColor TextInputClearButtonTintColorDefault { get; set; }
+
 	// @required @property (nonatomic, strong) UIFont * _Null_unspecified trailingUnderlineLabelFont;
 	[Abstract]
 	[Export ("trailingUnderlineLabelFont", ArgumentSemantic.Strong)]
@@ -3404,10 +3558,6 @@ partial interface Constants
 [BaseType (typeof(NSObject))]
 interface MDCTextInputControllerBase : IMDCTextInputControllerFloatingPlaceholder
 {
-	// @property (nonatomic, strong) UIColor * _Null_unspecified backgroundColor;
-	[Export ("backgroundColor", ArgumentSemantic.Strong)]
-	UIColor BackgroundColor { get; set; }
-
 	// @property (nonatomic, strong) UIColor * _Nullable borderFillColor;
 	[NullAllowed, Export ("borderFillColor", ArgumentSemantic.Strong)]
 	UIColor BorderFillColor { get; set; }
@@ -3436,6 +3586,14 @@ interface MDCTextInputControllerFilled
 [BaseType (typeof(NSObject))]
 interface MDCTextInputControllerFullWidth : IMDCTextInputController
 {
+	// @property (nonatomic, strong) UIColor * _Null_unspecified backgroundColor;
+	[Export ("backgroundColor", ArgumentSemantic.Strong)]
+	UIColor BackgroundColor { get; set; }
+
+	// @property (nonatomic, strong, class) UIColor * _Null_unspecified backgroundColorDefault;
+	[Static]
+	[Export ("backgroundColorDefault", ArgumentSemantic.Strong)]
+	UIColor BackgroundColorDefault { get; set; }
 }
 
 // @interface MDCTextInputControllerLegacyDefault : MDCTextInputControllerBase
@@ -4450,6 +4608,10 @@ interface MDCDialogPresentationController
 	[Export ("dismissOnBackgroundTap")]
 	bool DismissOnBackgroundTap { get; set; }
 
+	// @property (assign, nonatomic) CGFloat dialogCornerRadius;
+	[Export ("dialogCornerRadius")]
+	nfloat DialogCornerRadius { get; set; }
+
 	// -(CGSize)sizeForChildContentContainer:(id<UIContentContainer> _Nonnull)container withParentContainerSize:(CGSize)parentSize;
 	[Export ("sizeForChildContentContainer:withParentContainerSize:")]
 	CGSize SizeForChildContentContainer (UIContentContainer container, CGSize parentSize);
@@ -4703,6 +4865,19 @@ interface MDCLibraryInfo
 	[Static]
 	[Export ("versionString")]
 	string VersionString { get; }
+}
+
+// @interface MDCBaseCell : UICollectionViewCell
+[BaseType (typeof(UICollectionViewCell))]
+interface MDCBaseCell
+{
+	// @property (assign, nonatomic) MDCShadowElevation elevation;
+	[Export ("elevation")]
+	double Elevation { get; set; }
+
+	// @property (nonatomic, strong) UIColor * _Nonnull inkColor;
+	[Export ("inkColor", ArgumentSemantic.Strong)]
+	UIColor InkColor { get; set; }
 }
 
 // @interface MDCMaskedTransitionController : NSObject <UIViewControllerTransitioningDelegate>
@@ -5274,10 +5449,26 @@ interface MDCSliderColorThemer
 	MDCBasicColorScheme DefaultSliderDarkColorScheme { get; }
 }
 
+// @protocol MDCSnackbarManagerDelegate <NSObject>
+[Protocol, Model]
+[BaseType (typeof(NSObject))]
+interface MDCSnackbarManagerDelegate
+{
+	// @required -(void)willPresentSnackbarWithMessageView:(MDCSnackbarMessageView * _Nullable)messageView;
+	[Abstract]
+	[Export ("willPresentSnackbarWithMessageView:")]
+	void WillPresentSnackbarWithMessageView ([NullAllowed] MDCSnackbarMessageView messageView);
+}
+
 // @interface MDCSnackbarManager : NSObject
 [BaseType (typeof(NSObject))]
 interface MDCSnackbarManager
 {
+	// @property (assign, nonatomic, class) MDCSnackbarAlignment alignment;
+	[Static]
+	[Export ("alignment", ArgumentSemantic.Assign)]
+	MDCSnackbarAlignment Alignment { get; set; }
+
 	// +(void)showMessage:(MDCSnackbarMessage * _Nullable)message;
 	[Static]
 	[Export ("showMessage:")]
@@ -5287,6 +5478,12 @@ interface MDCSnackbarManager
 	[Static]
 	[Export ("setPresentationHostView:")]
 	void SetPresentationHostView ([NullAllowed] UIView hostView);
+
+	// +(BOOL)hasMessagesShowingOrQueued;
+	[Static]
+	[Export ("hasMessagesShowingOrQueued")]
+	[Verify (MethodToProperty)]
+	bool HasMessagesShowingOrQueued { get; }
 
 	// +(void)dismissAndCallCompletionBlocksWithCategory:(NSString * _Nullable)category;
 	[Static]
@@ -5360,6 +5557,15 @@ interface MDCSnackbarManager
 	[Static]
 	[Export ("mdc_adjustsFontForContentSizeCategory")]
 	bool Mdc_adjustsFontForContentSizeCategory { get; [Bind ("mdc_setAdjustsFontForContentSizeCategory:")] set; }
+
+	[Wrap ("WeakDelegate"), Static]
+	[NullAllowed]
+	MDCSnackbarManagerDelegate Delegate { get; set; }
+
+	// @property (nonatomic, weak, class) id<MDCSnackbarManagerDelegate> _Nullable delegate;
+	[Static]
+	[NullAllowed, Export ("delegate", ArgumentSemantic.Weak)]
+	NSObject WeakDelegate { get; set; }
 }
 
 // @protocol MDCSnackbarSuspensionToken <NSObject>
@@ -5480,6 +5686,10 @@ interface MDCSnackbarMessageView
 	// @property (nonatomic, strong) UIFont * _Nullable buttonFont __attribute__((annotate("ui_appearance_selector")));
 	[NullAllowed, Export ("buttonFont", ArgumentSemantic.Strong)]
 	UIFont ButtonFont { get; set; }
+
+	// @property (nonatomic, strong) NSMutableArray<MDCButton *> * _Nullable actionButtons;
+	[NullAllowed, Export ("actionButtons", ArgumentSemantic.Strong)]
+	NSMutableArray<MDCButton> ActionButtons { get; set; }
 
 	// -(UIColor * _Nullable)buttonTitleColorForState:(UIControlState)state __attribute__((annotate("ui_appearance_selector")));
 	[Export ("buttonTitleColorForState:")]
@@ -6143,6 +6353,16 @@ interface MDCTypography
 [BaseType (typeof(NSObject))]
 interface MDCSystemFontLoader : IMDCTypographyFontLoading
 {
+}
+
+// @interface MaterialSimpleEquality (UIFont)
+[Category]
+[BaseType (typeof(UIFont))]
+interface UIFont_MaterialSimpleEquality
+{
+	// -(BOOL)mdc_isSimplyEqual:(UIFont *)font;
+	[Export ("mdc_isSimplyEqual:")]
+	bool Mdc_isSimplyEqual (UIFont font);
 }
 
 // @interface MaterialTypography (UIFont)

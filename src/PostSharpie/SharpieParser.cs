@@ -248,27 +248,27 @@ namespace PostSharpie
 {1}
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include=""..\..\references.55\MDFTextAccessibility.framework"">
+    <NativeReference Include=""..\..\references.58\MDFTextAccessibility.framework"">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
-    <NativeReference Include=""..\..\references.55\MotionAnimator.framework"">
+    <NativeReference Include=""..\..\references.58\MotionAnimator.framework"">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
-    <NativeReference Include=""..\..\references.55\MotionInterchange.framework"">
+    <NativeReference Include=""..\..\references.58\MotionInterchange.framework"">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
-    <NativeReference Include=""..\..\references.55\MotionTransitioning.framework"">
+    <NativeReference Include=""..\..\references.58\MotionTransitioning.framework"">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
-    <NativeReference Include=""..\..\references.55\MaterialComponents.framework"">
+    <NativeReference Include=""..\..\references.58\MaterialComponents.framework"">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
-    <NativeReference Include=""..\..\references\MDFInternationalization.framework"">
+    <NativeReference Include=""..\..\references.58\MDFInternationalization.framework"">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>

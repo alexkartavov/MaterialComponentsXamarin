@@ -19,7 +19,7 @@ namespace MaterialComponents.Forms
         }
 
         public static readonly BindableProperty InkMaxRippleRadiusProperty =
-            BindableProperty.Create("InkMaxRippleRadius", typeof(double), typeof(XfMDCButton), 0.0);
+            BindableProperty.Create("InkMaxRippleRadius", typeof(double), typeof(XfMDCButton), default(double));
 
         public double InkMaxRippleRadius
         {
@@ -28,7 +28,7 @@ namespace MaterialComponents.Forms
         }
 
         public static readonly BindableProperty DisabledAlphaProperty =
-            BindableProperty.Create("DisabledAlpha", typeof(double), typeof(XfMDCButton), 0.0);
+            BindableProperty.Create("DisabledAlpha", typeof(double), typeof(XfMDCButton), default(double));
 
         public double DisabledAlpha
         {
