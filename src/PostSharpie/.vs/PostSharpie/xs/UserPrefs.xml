@@ -1,21 +1,83 @@
 ﻿<Properties StartupConfiguration="{4A9808D3-8095-4CA5-A516-952C4BC2EDD2}|Default">
   <MonoDevelop.Ide.ItemProperties.PostSharpie PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../MaterialComponents.Parsed/Components/MDCFloatingButton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../MaterialComponents.Parsed/Components/obj/Debug/ios/MaterialComponents/MDCBottomNavigationBar.g.cs">
     <Files>
-      <File FileName="Config/Binding.cs" Line="120" Column="75" />
-      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MaterialActivityIndicatorRenderer.cs" Line="31" Column="18" />
-      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/Components/MDCActivityIndicator.cs" Line="41" Column="69" />
-      <File FileName="../MaterialComponents.Parsed/Components/MDCButton.cs" Line="113" Column="26" />
-      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/Components/MDCButton.cs" Line="80" Column="76" />
-      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/Components/MDCActivityIndicatorMode.cs" Line="11" Column="1" />
-      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/Components1/XfMaterialFloatingButton.cs" Line="1" Column="1" />
-      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MaterialFloatingButtonRenderer.cs" Line="1" Column="1" />
-      <File FileName="../MaterialComponents.Parsed/Components/MDCFloatingButton.cs" Line="1" Column="1" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/ActivityPage.xaml" Line="4" Column="64" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/ButtonsPage.xaml" Line="4" Column="64" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/EditorPage.xaml" Line="4" Column="64" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/EntryPage.xaml" Line="4" Column="64" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/MainPage.xaml" Line="19" Column="13" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/ProgressPage.xaml" Line="4" Column="64" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/SliderPage.xaml" Line="19" Column="1" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/ProgressPage.xaml.cs" Line="14" Column="15" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MDCActivityIndicator.cs" Line="1" Column="1" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MDCButton.cs" Line="1" Column="1" />
+      <File FileName="SharpieParser.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCBasicFontScheme.cs" Line="14" Column="33" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCRectangleShapeGenerator.cs" Line="14" Column="41" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCButtonScheme.cs" Line="14" Column="30" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCCardScheme.cs" Line="14" Column="28" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCChipViewScheme.cs" Line="14" Column="32" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCCollectionViewController.cs" Line="51" Column="29" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCTabBarUnderlineIndicatorTemplate.cs" Line="14" Column="50" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCTabBarViewController.cs" Line="15" Column="3" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCCurvedRectShapeGenerator.cs" Line="14" Column="42" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCPillShapeGenerator.cs" Line="14" Column="36" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCSlantedRectShapeGenerator.cs" Line="14" Column="43" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCFlexibleHeaderView.cs" Line="36" Column="5" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCFlexibleHeaderScrollPhase.cs" Line="1" Column="1" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCNavigationBar.cs" Line="99" Column="15" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCInkTouchControllerDelegate.cs" Line="29" Column="50" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCPathGenerator.cs" Line="46" Column="5" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCShapeGenerating.cs" Line="16" Column="12" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCBottomNavigationBarDelegate.cs" Line="21" Column="47" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCChipFieldDelegate.cs" Line="40" Column="34" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCChipViewColorThemer.cs" Line="27" Column="56" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCCollectionViewEditingDelegate.cs" Line="100" Column="59" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCCollectionViewStylingDelegate.cs" Line="57" Column="51" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCTabBarDelegate.cs" Line="24" Column="8" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCTabBarControllerDelegate.cs" Line="22" Column="54" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCOverlayTransitioning.cs" Line="38" Column="9" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCThumbTrackDelegate.cs" Line="31" Column="42" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCFlexibleHeaderViewController.cs" Line="31" Column="9" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCInkGestureRecognizer.cs" Line="30" Column="9" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCCornerTreatment.cs" Line="13" Column="4" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCChipCollectionViewCell.cs" Line="25" Column="35" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCCollectionViewStyling.cs" Line="13" Column="4" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCDialogPresentationController.cs" Line="25" Column="54" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCFloatingButton.cs" Line="32" Column="9" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCIcons_ic_arrow_back.cs" Line="29" Column="3" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCIcons_ic_check.cs" Line="25" Column="3" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCIcons_ic_check_circle.cs" Line="26" Column="44" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCIcons_ic_chevron_right.cs" Line="26" Column="45" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCIcons_ic_color_lens.cs" Line="26" Column="42" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCIcons_ic_help_outline.cs" Line="26" Column="44" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCIcons_ic_info.cs" Line="26" Column="36" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCIcons_ic_more_horiz.cs" Line="26" Column="42" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCIcons_ic_radio_button_unchecked.cs" Line="26" Column="54" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCIcons_ic_reorder.cs" Line="26" Column="39" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCIcons_ic_settings.cs" Line="26" Column="40" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCSliderColorThemer.cs" Line="32" Column="9" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCSnackbarManager.cs" Line="36" Column="57" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCTypography.cs" Line="20" Column="9" />
+      <File FileName="../MaterialComponents.Parsed/Components/UIApplication_AppExtensions.cs" Line="26" Column="35" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCTextInputControllerBase.cs" Line="13" Column="4" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCChipField.cs" Line="20" Column="5" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCCollectionViewCell.cs" Line="13" Column="4" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCCollectionViewTextCell.cs" Line="13" Column="4" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCFeatureHighlightViewController.cs" Line="13" Column="4" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCPalette.cs" Line="13" Column="4" />
+      <File FileName="../MaterialComponents.Parsed/Components/MDCSnackbarMessage.cs" Line="17" Column="4" />
+      <File FileName="../MaterialComponents.Parsed/Components/CFunctions.cs" Line="21" Column="31" />
+      <File FileName="../MaterialComponents.Parsed/Components/obj/Debug/ios/MaterialComponents/MDCBottomNavigationBar.g.cs" Line="181" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/akartavov/Source/MaterialComponentsXamarin/src/PostSharpie/Program.cs" relfile="Program.cs" line="90" column="40" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

@@ -71,112 +71,112 @@
   },
   {
     "Name": "CAMediaTimingFunction_MDCAnimationTiming",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "UIView_MDCTimingFunction",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFlexibleHeaderContainerViewController",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFlexibleHeaderView",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFlexibleHeaderViewDelegate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFlexibleHeaderView_",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFlexibleHeaderViewController",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFlexibleHeaderViewLayoutDelegate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCHeaderStackView",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCUINavigationItemObservables",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCNavigationBarTextColorAccessibilityMutator",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCNavigationBar",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCAppBarTextColorAccessibilityMutator",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCAppBar",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCAppBarContainerViewController",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCAppBarColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
@@ -190,7 +190,7 @@
   },
   {
     "Name": "MDCBasicFontScheme",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
@@ -211,112 +211,112 @@
   },
   {
     "Name": "MDCAppBarTypographyThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCInkGestureRecognizer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCInkTouchController",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCInkTouchControllerDelegate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCInkView",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCInkViewDelegate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCornerTreatment",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCEdgeTreatment",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCPathGenerator",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCShapeGenerating",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCRectangleShapeGenerator",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCShadowMetrics",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCShadowLayer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCShadowLayer_Subclassing",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCShapedShadowLayer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCShapedView",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
@@ -358,161 +358,161 @@
   },
   {
     "Name": "MDCBottomAppBarView",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCBottomAppBarColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCBottomNavigationBar",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCBottomNavigationBarDelegate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCBottomNavigationBarColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCBottomNavigationBarTypographyThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCBottomSheetController",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCBottomSheetControllerDelegate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCBottomSheetPresentationControllerDelegate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCBottomSheetPresentationController",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCBottomSheetTransitionController",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "UIViewController_MaterialBottomSheet",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCButtonBar",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCButtonBarDelegate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCButtonBarButton",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCButtonBarColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCButtonBarTypographyThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCButtonScheming",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCButtonScheme",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCContainedButtonThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFloatingActionButtonThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTextButtonThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCOutlinedButtonThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
@@ -568,70 +568,70 @@
   },
   {
     "Name": "MDCCard",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCardCollectionCell",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "UICollectionViewController_MDCCardReordering",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCardScheming",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCardScheme",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCardThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCardsColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCChipCollectionViewFlowLayout",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCChipCollectionViewCell",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCChipView",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
@@ -785,294 +785,294 @@
   },
   {
     "Name": "MDCChipField",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCChipFieldDelegate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCChipViewScheming",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCChipViewScheme",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCChipViewThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCChipViewColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCChipViewFontThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCChipViewTypographyThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCollectionViewCell",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCollectionViewTextCell",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCollectionViewLayoutAttributes",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCollectionViewEditingDelegate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCollectionViewStyling",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCollectionViewStylingDelegate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCollectionViewController",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCollectionViewEditing",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCollectionViewFlowLayout",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCAlertController",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCAlertAction",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCAlertControllerView",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCDialogPresentationController",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCDialogTransitionController",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "UIViewController_MaterialDialogs",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCAlertColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCAlertTypographyThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFeatureHighlightViewController",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFeatureHighlightView",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFeatureHighlightColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFeatureHighlightAccessibilityMutator",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFeatureHighlightFontThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFeatureHighlightTypographyThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFlexibleHeaderColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCHeaderStackViewColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCInkColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCLibraryInfo",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCMaskedTransitionController",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCNavigationBarColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCNavigationBarTypographyThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCOverlayWindow",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCPageControl",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCPageControlColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCPalette",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
@@ -1114,147 +1114,147 @@
   },
   {
     "Name": "MDCSnackbarManager",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCSnackbarSuspensionToken",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCSnackbarMessage",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCSnackbarMessageAction",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCSnackbarMessageView",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCSnackbarMessageView_",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCSnackbarColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCSnackbarFontThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCSnackbarTypographyThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBar",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBar_MDCAccessibility",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBarDelegate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBarIndicatorAttributes",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBarIndicatorContext",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBarIndicatorTemplate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBarUnderlineIndicatorTemplate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBarViewController",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBarControllerDelegate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBarColorThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBarFontThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBarTypographyThemer",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
@@ -1338,203 +1338,203 @@
   },
   {
     "Name": "UIApplication_AppExtensions",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCIcons",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCIcons_BundleLoader",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCIcons_ic_arrow_back",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCIcons_ic_check",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCIcons_ic_check_circle",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCIcons_ic_chevron_right",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCIcons_ic_color_lens",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCIcons_ic_help_outline",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCIcons_ic_info",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCIcons_ic_more_horiz",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCIcons_ic_radio_button_unchecked",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCIcons_ic_reorder",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCIcons_ic_settings",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCKeyboardWatcher",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCOverlayObserver",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCOverlay",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCOverlayTransitioning",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCurvedCornerTreatment",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCurvedRectShapeGenerator",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCPillShapeGenerator",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCRoundedCornerTreatment",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCSlantedRectShapeGenerator",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTriangleEdgeTreatment",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCutCornerTreatment",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCThumbTrack",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCThumbTrackDelegate",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCThumbView",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCNumericValueLabel",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
@@ -1555,35 +1555,35 @@
   },
   {
     "Name": "MDCAnimationTimingFunction",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFlexibleHeaderShiftBehavior",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFlexibleHeaderContentImportance",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCFlexibleHeaderScrollPhase",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCNavigationBarTitleAlignment",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
@@ -1625,63 +1625,63 @@
   },
   {
     "Name": "MDCBottomAppBarFloatingButtonElevation",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCBottomAppBarFloatingButtonPosition",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCBottomNavigationBarTitleVisibility",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCBottomNavigationBarAlignment",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCButtonBarLayoutPosition",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCBarButtonItemLayoutHints",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCardCellState",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCardCellHorizontalImageAlignment",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCardCellVerticalImageAlignment",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
@@ -1695,35 +1695,35 @@
   },
   {
     "Name": "MDCChipFieldDelimiter",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCollectionViewCellAccessoryType",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCollectionViewOrdinalPosition",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCollectionViewCellStyle",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCCollectionViewCellLayoutType",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
@@ -1737,28 +1737,28 @@
   },
   {
     "Name": "MDCTabBarAlignment",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBarItemAppearance",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBarTextTransform",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTabBarItemState",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
@@ -1772,14 +1772,14 @@
   },
   {
     "Name": "CFunctions",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null
   },
   {
     "Name": "MDCTriangleEdgeStyle",
-    "EnableBinding": false,
+    "EnableBinding": true,
     "EnableXFWrapper": false,
     "BindableProperties": null,
     "Events": null

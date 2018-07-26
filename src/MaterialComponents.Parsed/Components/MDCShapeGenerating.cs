@@ -14,9 +14,9 @@ namespace MaterialComponents
 	interface MDCShapeGenerating : INSCopying, INSSecureCoding
 	{
 		// @required -(CGPathRef _Nullable)pathForSize:(CGSize)size;
-		[Abstract]
-		[Export ("pathForSize:")]
-		[return: NullAllowed]
-		unsafe CGPathRef* PathForSize (CGSize size);
+		//[Abstract]
+		//[Export ("pathForSize:")]
+		//[return: NullAllowed]
+		//unsafe CGPathRef* PathForSize (CGSize size);
 	}
 }

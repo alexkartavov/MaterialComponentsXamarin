@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using CoreAnimation;
 using CoreGraphics;
 using Foundation;
@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 
 namespace MaterialComponents
 {
-	[Static]
+	//[Static]
 	//[Verify (ConstantsInterfaceAssociation)]
 	partial interface Constants
 	{

@@ -11,7 +11,7 @@ namespace PostSharpie
         static readonly string DefaultOutputFolder = "./PostSharpieParsed";
         static readonly string DefaultNamespace = "MaterialComponents";
         static readonly string DefaultProject = "MaterialComponents";
-        static readonly string DefaultConfigName = "MDCConfing.json";
+        static readonly string DefaultConfigName = "MDCConfig.json";
         static readonly string DefaultXfFolder = "XamarinForms";
         static readonly string DefaultIOSFolder = "XamarinForms.iOS";
         static readonly string DefaultAndroidFolder = "XamarinForms.Android";
