@@ -36,6 +36,8 @@ namespace MaterialComponents.iOS
                 UpdateRadius();
                 UpdateStrokeWidth();
                 UpdateIndicatorMode();
+                UpdateTrackEnabled();
+                UpdateProgress();
                 UpdateCycleColors();
             }
 
@@ -62,6 +64,14 @@ namespace MaterialComponents.iOS
             {
                 UpdateIndicatorMode();
             }
+            else if (e.PropertyName == XfMDCActivityIndicator.TrackEnabledProperty.PropertyName)
+            {
+                UpdateTrackEnabled();
+            }
+            else if (e.PropertyName == XfMDCActivityIndicator.ProgressProperty.PropertyName)
+            {
+                UpdateProgress();
+            }
             else if (e.PropertyName == XfMDCActivityIndicator.CycleColorsProperty.PropertyName)
             {
                 UpdateCycleColors();
@@ -71,18 +81,38 @@ namespace MaterialComponents.iOS
 
         void UpdateAnimating()
         {
+            Control.Animating = Element.Animating;
         }
+
         void UpdateRadius()
         {
+            Control.Radius = Element.Radius;
         }
+
         void UpdateStrokeWidth()
         {
+            Control.StrokeWidth = Element.StrokeWidth;
         }
+
         void UpdateIndicatorMode()
         {
+            Control.IndicatorMode = Element.IndicatorMode;
         }
+
+        void UpdateTrackEnabled()
+        {
+            Control.TrackEnabled = Element.TrackEnabled;
+        }
+
+        void UpdateProgress()
+        {
+            Control.Progress = Element.Progress;
+        }
+
         void UpdateCycleColors()
         {
+            Control.CycleColors = Element.CycleColors;
         }
+
     }
 }

@@ -99,6 +99,7 @@ namespace {0}.iOS
         private readonly string IosUpdateMethodTemplate = @"
         void Update{0}()
         {
+            Control.{0} = Element.{0};
         }";
 
         //private readonly string AndroidRendererTemplate = @"";
@@ -154,7 +155,7 @@ namespace {0}.iOS
                              .Replace("{0}", Name)
                              .Replace("{1}", property.Name));
                 
-                methods.Append(IosUpdateMethodTemplate
+                methods.AppendLine(IosUpdateMethodTemplate
                                   .Replace("{0}", property.Name));
             }
 
@@ -165,7 +166,7 @@ namespace {0}.iOS
                            .Replace("{3}", props.ToString())
                            .Replace("{4}", methods.ToString()));
 
-            File.WriteAllText(iosFolder + "/" + Name + ".cs", content.ToString());
+            File.WriteAllText(iosFolder + "/" + Name + "Renderer.cs", content.ToString());
         }
 
         public void GenerateAndroidRenderer(string androidFolder, string ns)

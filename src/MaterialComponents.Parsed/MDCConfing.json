@@ -11,18 +11,28 @@
       },
       {
         "Name": "Radius",
-        "Type": "double",
-        "DefaultValue": "default(double)"
+        "Type": "float",
+        "DefaultValue": "3.0"
       },
       {
         "Name": "StrokeWidth",
-        "Type": "double",
-        "DefaultValue": "default(double)"
+        "Type": "float",
+        "DefaultValue": "15.0"
       },
       {
         "Name": "IndicatorMode",
         "Type": "MDCActivityIndicatorMode",
         "DefaultValue": "MDCActivityIndicatorMode.Indeterminate"
+      },
+      {
+        "Name": "TrackEnabled",
+        "Type": "bool",
+        "DefaultValue": "false"
+      },
+      {
+        "Name": "Progress",
+        "Type": "float",
+        "DefaultValue": "default(float)"
       },
       {
         "Name": "CycleColors",
@@ -353,19 +363,24 @@
     "EnableXFWrapper": true,
     "BindableProperties": [
       {
+        "Name": "InkStyle",
+        "Type": "MDCInkStyle",
+        "DefaultValue": "MDCInkStyle.Bounded"
+      },
+      {
         "Name": "InkColor",
         "Type": "Color",
         "DefaultValue": "Color.Default"
       },
       {
         "Name": "InkMaxRippleRadius",
-        "Type": "double",
-        "DefaultValue": "default(double)"
+        "Type": "float",
+        "DefaultValue": "10.0"
       },
       {
         "Name": "DisabledAlpha",
-        "Type": "double",
-        "DefaultValue": "default(double)"
+        "Type": "float",
+        "DefaultValue": "0.8"
       },
       {
         "Name": "MinimumSize",
@@ -378,7 +393,7 @@
         "DefaultValue": "Size.Zero"
       },
       {
-        "Name": "MaximumUnderlyingColorHintSize",
+        "Name": "UnderlyingColorHint",
         "Type": "Color",
         "DefaultValue": "Color.Default"
       },
@@ -390,12 +405,12 @@
       {
         "Name": "ShouldRaiseOnTouch",
         "Type": "bool",
-        "DefaultValue": "false"
+        "DefaultValue": "true"
       },
       {
         "Name": "ShouldCapitalizeTitle",
         "Type": "bool",
-        "DefaultValue": "false"
+        "DefaultValue": "true"
       },
       {
         "Name": "UnderlyingColor",

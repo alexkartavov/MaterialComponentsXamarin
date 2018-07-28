@@ -32,12 +32,13 @@ namespace MaterialComponents.iOS
                     SetNativeControl(CreateNativeControl());
                 }
 
+                UpdateInkStyle();
                 UpdateInkColor();
                 UpdateInkMaxRippleRadius();
                 UpdateDisabledAlpha();
                 UpdateMinimumSize();
                 UpdateMaximumSize();
-                UpdateMaximumUnderlyingColorHintSize();
+                UpdateUnderlyingColorHint();
                 UpdateCustomTitleColor();
                 UpdateShouldRaiseOnTouch();
                 UpdateShouldCapitalizeTitle();
@@ -51,7 +52,11 @@ namespace MaterialComponents.iOS
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (e.PropertyName == XfMDCButton.InkColorProperty.PropertyName)
+            if (e.PropertyName == XfMDCButton.InkStyleProperty.PropertyName)
+            {
+                UpdateInkStyle();
+            }
+            else if (e.PropertyName == XfMDCButton.InkColorProperty.PropertyName)
             {
                 UpdateInkColor();
             }
@@ -71,9 +76,9 @@ namespace MaterialComponents.iOS
             {
                 UpdateMaximumSize();
             }
-            else if (e.PropertyName == XfMDCButton.MaximumUnderlyingColorHintSizeProperty.PropertyName)
+            else if (e.PropertyName == XfMDCButton.UnderlyingColorHintProperty.PropertyName)
             {
-                UpdateMaximumUnderlyingColorHintSize();
+                UpdateUnderlyingColorHint();
             }
             else if (e.PropertyName == XfMDCButton.CustomTitleColorProperty.PropertyName)
             {
@@ -94,35 +99,60 @@ namespace MaterialComponents.iOS
             
         }
 
+        void UpdateInkStyle()
+        {
+            Control.InkStyle = Element.InkStyle;
+        }
+
         void UpdateInkColor()
         {
+            Control.InkColor = Element.InkColor;
         }
+
         void UpdateInkMaxRippleRadius()
         {
+            Control.InkMaxRippleRadius = Element.InkMaxRippleRadius;
         }
+
         void UpdateDisabledAlpha()
         {
+            Control.DisabledAlpha = Element.DisabledAlpha;
         }
+
         void UpdateMinimumSize()
         {
+            Control.MinimumSize = Element.MinimumSize;
         }
+
         void UpdateMaximumSize()
         {
+            Control.MaximumSize = Element.MaximumSize;
         }
-        void UpdateMaximumUnderlyingColorHintSize()
+
+        void UpdateUnderlyingColorHint()
         {
+            Control.UnderlyingColorHint = Element.UnderlyingColorHint;
         }
+
         void UpdateCustomTitleColor()
         {
+            Control.CustomTitleColor = Element.CustomTitleColor;
         }
+
         void UpdateShouldRaiseOnTouch()
         {
+            Control.ShouldRaiseOnTouch = Element.ShouldRaiseOnTouch;
         }
+
         void UpdateShouldCapitalizeTitle()
         {
+            Control.ShouldCapitalizeTitle = Element.ShouldCapitalizeTitle;
         }
+
         void UpdateUnderlyingColor()
         {
+            Control.UnderlyingColor = Element.UnderlyingColor;
         }
+
     }
 }

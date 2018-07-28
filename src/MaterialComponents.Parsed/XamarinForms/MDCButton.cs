@@ -9,8 +9,17 @@ namespace MaterialComponents.Forms
         {
         }
 
+        public static readonly BindableProperty InkStyleProperty =
+            BindableProperty.Create("InkStyle", typeof(MDCInkStyle), typeof(XfMDCButton), MDCInkStyle.Bounded);
+
+        public MDCInkStyle InkStyle
+        {
+            get { return (MDCInkStyle)base.GetValue(InkStyleProperty); }
+            set { base.SetValue(InkStyleProperty, value); }
+        }
+
         public static readonly BindableProperty InkColorProperty =
-            BindableProperty.Create("InkColor", typeof(Color), typeof(XfMDCButton), null);
+            BindableProperty.Create("InkColor", typeof(Color), typeof(XfMDCButton), Color.Default);
 
         public Color InkColor
         {
@@ -19,25 +28,25 @@ namespace MaterialComponents.Forms
         }
 
         public static readonly BindableProperty InkMaxRippleRadiusProperty =
-            BindableProperty.Create("InkMaxRippleRadius", typeof(double), typeof(XfMDCButton), default(double));
+            BindableProperty.Create("InkMaxRippleRadius", typeof(float), typeof(XfMDCButton), 10.0);
 
-        public double InkMaxRippleRadius
+        public float InkMaxRippleRadius
         {
-            get { return (double)base.GetValue(InkMaxRippleRadiusProperty); }
+            get { return (float)base.GetValue(InkMaxRippleRadiusProperty); }
             set { base.SetValue(InkMaxRippleRadiusProperty, value); }
         }
 
         public static readonly BindableProperty DisabledAlphaProperty =
-            BindableProperty.Create("DisabledAlpha", typeof(double), typeof(XfMDCButton), default(double));
+            BindableProperty.Create("DisabledAlpha", typeof(float), typeof(XfMDCButton), 0.8);
 
-        public double DisabledAlpha
+        public float DisabledAlpha
         {
-            get { return (double)base.GetValue(DisabledAlphaProperty); }
+            get { return (float)base.GetValue(DisabledAlphaProperty); }
             set { base.SetValue(DisabledAlphaProperty, value); }
         }
 
         public static readonly BindableProperty MinimumSizeProperty =
-            BindableProperty.Create("MinimumSize", typeof(Size), typeof(XfMDCButton), null);
+            BindableProperty.Create("MinimumSize", typeof(Size), typeof(XfMDCButton), Size.Zero);
 
         public Size MinimumSize
         {
@@ -46,7 +55,7 @@ namespace MaterialComponents.Forms
         }
 
         public static readonly BindableProperty MaximumSizeProperty =
-            BindableProperty.Create("MaximumSize", typeof(Size), typeof(XfMDCButton), null);
+            BindableProperty.Create("MaximumSize", typeof(Size), typeof(XfMDCButton), Size.Zero);
 
         public Size MaximumSize
         {
@@ -54,17 +63,17 @@ namespace MaterialComponents.Forms
             set { base.SetValue(MaximumSizeProperty, value); }
         }
 
-        public static readonly BindableProperty MaximumUnderlyingColorHintSizeProperty =
-            BindableProperty.Create("MaximumUnderlyingColorHintSize", typeof(Color), typeof(XfMDCButton), null);
+        public static readonly BindableProperty UnderlyingColorHintProperty =
+            BindableProperty.Create("UnderlyingColorHint", typeof(Color), typeof(XfMDCButton), Color.Default);
 
-        public Color MaximumUnderlyingColorHintSize
+        public Color UnderlyingColorHint
         {
-            get { return (Color)base.GetValue(MaximumUnderlyingColorHintSizeProperty); }
-            set { base.SetValue(MaximumUnderlyingColorHintSizeProperty, value); }
+            get { return (Color)base.GetValue(UnderlyingColorHintProperty); }
+            set { base.SetValue(UnderlyingColorHintProperty, value); }
         }
 
         public static readonly BindableProperty CustomTitleColorProperty =
-            BindableProperty.Create("CustomTitleColor", typeof(Color), typeof(XfMDCButton), null);
+            BindableProperty.Create("CustomTitleColor", typeof(Color), typeof(XfMDCButton), Color.Default);
 
         public Color CustomTitleColor
         {
@@ -91,7 +100,7 @@ namespace MaterialComponents.Forms
         }
 
         public static readonly BindableProperty UnderlyingColorProperty =
-            BindableProperty.Create("UnderlyingColor", typeof(Color), typeof(XfMDCButton), null);
+            BindableProperty.Create("UnderlyingColor", typeof(Color), typeof(XfMDCButton), Color.Default);
 
         public Color UnderlyingColor
         {
