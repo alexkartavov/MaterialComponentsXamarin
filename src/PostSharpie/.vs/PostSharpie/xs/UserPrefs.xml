@@ -1,9 +1,16 @@
 ﻿<Properties StartupConfiguration="{4A9808D3-8095-4CA5-A516-952C4BC2EDD2}|Default">
   <MonoDevelop.Ide.ItemProperties.PostSharpie PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/Components/MDCSlider.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/EntryPage.xaml">
     <Files>
       <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/SliderPage.xaml" Line="14" Column="36" />
       <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/Components/MDCSlider.cs" Line="1" Column="1" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/Components/MDCTextField.cs" Line="1" Column="1" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/Components/MDCMultilineTextField.cs" Line="6" Column="57" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MDCTextFieldRenderer.cs" Line="106" Column="9" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MDCMultilineTextFieldRenderer.cs" Line="63" Column="10" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms.iOS/Components/MDCFloatingButtonRenderer.cs" Line="1" Column="1" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/EditorPage.xaml" Line="25" Column="1" />
+      <File FileName="../../../MaterialComponentsXamarinForms/MaterialComponentsXamarinForms/EntryPage.xaml" Line="22" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

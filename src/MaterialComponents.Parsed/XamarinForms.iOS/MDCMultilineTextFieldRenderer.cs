@@ -32,6 +32,8 @@ namespace MaterialComponents.iOS
                     SetNativeControl(CreateNativeControl());
                 }
 
+                UpdateExpandsOnOverflow();
+                UpdateMinimumLines();
             }
 
             base.OnElementChanged(e);
@@ -41,6 +43,25 @@ namespace MaterialComponents.iOS
         {
             base.OnElementPropertyChanged(sender, e);
 
+            if (e.PropertyName == XfMDCMultilineTextField.ExpandsOnOverflowProperty.PropertyName)
+            {
+                UpdateExpandsOnOverflow();
+            }
+            else if (e.PropertyName == XfMDCMultilineTextField.MinimumLinesProperty.PropertyName)
+            {
+                UpdateMinimumLines();
+            }
+            
+        }
+
+        void UpdateExpandsOnOverflow()
+        {
+            Control.ExpandsOnOverflow = Element.ExpandsOnOverflow;
+        }
+
+        void UpdateMinimumLines()
+        {
+            Control.MinimumLines = Element.MinimumLines;
         }
 
     }

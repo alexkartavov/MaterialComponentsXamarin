@@ -32,6 +32,12 @@ namespace MaterialComponents.iOS
                     SetNativeControl(CreateNativeControl());
                 }
 
+                UpdateCursorColor();
+                UpdateEnabled();
+                UpdateHidesPlaceholderOnInput();
+                UpdatePlaceholder();
+                UpdateText();
+                UpdateTextColor();
             }
 
             base.OnElementChanged(e);
@@ -41,6 +47,61 @@ namespace MaterialComponents.iOS
         {
             base.OnElementPropertyChanged(sender, e);
 
+            if (e.PropertyName == XfMDCTextInput.CursorColorProperty.PropertyName)
+            {
+                UpdateCursorColor();
+            }
+            else if (e.PropertyName == XfMDCTextInput.EnabledProperty.PropertyName)
+            {
+                UpdateEnabled();
+            }
+            else if (e.PropertyName == XfMDCTextInput.HidesPlaceholderOnInputProperty.PropertyName)
+            {
+                UpdateHidesPlaceholderOnInput();
+            }
+            else if (e.PropertyName == XfMDCTextInput.PlaceholderProperty.PropertyName)
+            {
+                UpdatePlaceholder();
+            }
+            else if (e.PropertyName == XfMDCTextInput.TextProperty.PropertyName)
+            {
+                UpdateText();
+            }
+            else if (e.PropertyName == XfMDCTextInput.TextColorProperty.PropertyName)
+            {
+                UpdateTextColor();
+            }
+            
+        }
+
+        void UpdateCursorColor()
+        {
+            Control.CursorColor = Element.CursorColor.ToUIColor();
+        }
+
+        void UpdateEnabled()
+        {
+            Control.Enabled = Element.Enabled;
+        }
+
+        void UpdateHidesPlaceholderOnInput()
+        {
+            Control.HidesPlaceholderOnInput = Element.HidesPlaceholderOnInput;
+        }
+
+        void UpdatePlaceholder()
+        {
+            Control.Placeholder = Element.Placeholder;
+        }
+
+        void UpdateText()
+        {
+            Control.Text = Element.Text;
+        }
+
+        void UpdateTextColor()
+        {
+            Control.TextColor = Element.TextColor.ToUIColor();
         }
 
     }

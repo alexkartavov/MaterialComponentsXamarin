@@ -756,7 +756,7 @@
   {
     "Name": "MDCTextInput",
     "EnableBinding": true,
-    "EnableXFWrapper": true,
+    "EnableXFWrapper": false,
     "BindableProperties": [],
     "Events": []
   },
@@ -770,7 +770,7 @@
   {
     "Name": "MDCMultilineTextInput",
     "EnableBinding": true,
-    "EnableXFWrapper": true,
+    "EnableXFWrapper": false,
     "BindableProperties": [],
     "Events": []
   },
@@ -778,7 +778,18 @@
     "Name": "MDCMultilineTextField",
     "EnableBinding": true,
     "EnableXFWrapper": true,
-    "BindableProperties": [],
+    "BindableProperties": [
+      {
+        "Name": "ExpandsOnOverflow",
+        "Type": "bool",
+        "DefaultValue": "true"
+      },
+      {
+        "Name": "MinimumLines",
+        "Type": "uint",
+        "DefaultValue": "1"
+      }
+    ],
     "Events": []
   },
   {
@@ -799,7 +810,38 @@
     "Name": "MDCTextField",
     "EnableBinding": true,
     "EnableXFWrapper": true,
-    "BindableProperties": [],
+    "BindableProperties": [
+      {
+        "Name": "CursorColor",
+        "Type": "Color",
+        "DefaultValue": "Color.Black"
+      },
+      {
+        "Name": "Enabled",
+        "Type": "bool",
+        "DefaultValue": "true"
+      },
+      {
+        "Name": "HidesPlaceholderOnInput",
+        "Type": "bool",
+        "DefaultValue": "true"
+      },
+      {
+        "Name": "Placeholder",
+        "Type": "string",
+        "DefaultValue": "null"
+      },
+      {
+        "Name": "Text",
+        "Type": "string",
+        "DefaultValue": "null"
+      },
+      {
+        "Name": "TextColor",
+        "Type": "Color",
+        "DefaultValue": "Color.Black"
+      }
+    ],
     "Events": []
   },
   {
