@@ -431,7 +431,18 @@
     "Name": "MDCFloatingButton",
     "EnableBinding": true,
     "EnableXFWrapper": true,
-    "BindableProperties": [],
+    "BindableProperties": [
+      {
+        "Name": "Mode",
+        "Type": "MDCFloatingButtonMode",
+        "DefaultValue": "MDCFloatingButtonMode.Normal"
+      },
+      {
+        "Name": "ImageLocation",
+        "Type": "MDCFloatingButtonImageLocation",
+        "DefaultValue": "MDCFloatingButtonImageLocation.Leading"
+      }
+    ],
     "Events": []
   },
   {
@@ -1194,7 +1205,28 @@
     "Name": "MDCProgressView",
     "EnableBinding": true,
     "EnableXFWrapper": true,
-    "BindableProperties": [],
+    "BindableProperties": [
+      {
+        "Name": "ProgressTintColor",
+        "Type": "Color",
+        "DefaultValue": "Color.Default"
+      },
+      {
+        "Name": "TrackTintColor",
+        "Type": "Color",
+        "DefaultValue": "Color.Default"
+      },
+      {
+        "Name": "Progress",
+        "Type": "float",
+        "DefaultValue": "default(float)"
+      },
+      {
+        "Name": "BackwardProgressAnimationMode",
+        "Type": "MDCProgressViewBackwardAnimationMode",
+        "DefaultValue": "MDCProgressViewBackwardAnimationMode.Reset"
+      }
+    ],
     "Events": []
   },
   {
@@ -1208,7 +1240,88 @@
     "Name": "MDCSlider",
     "EnableBinding": true,
     "EnableXFWrapper": true,
-    "BindableProperties": [],
+    "BindableProperties": [
+      {
+        "Name": "InkColor",
+        "Type": "Color",
+        "DefaultValue": "Color.Default"
+      },
+      {
+        "Name": "ThumbRadius",
+        "Type": "float",
+        "DefaultValue": "10.0f"
+      },
+      {
+        "Name": "ThumbElevation",
+        "Type": "double",
+        "DefaultValue": "2.0"
+      },
+      {
+        "Name": "NumberOfDiscreteValues",
+        "Type": "uint",
+        "DefaultValue": "default(uint)"
+      },
+      {
+        "Name": "Value",
+        "Type": "float",
+        "DefaultValue": "default(float)"
+      },
+      {
+        "Name": "MinimumValue",
+        "Type": "float",
+        "DefaultValue": "default(float)"
+      },
+      {
+        "Name": "MaximumValue",
+        "Type": "float",
+        "DefaultValue": "default(float)"
+      },
+      {
+        "Name": "Continuous",
+        "Type": "bool",
+        "DefaultValue": "false"
+      },
+      {
+        "Name": "FilledTrackAnchorValue",
+        "Type": "float",
+        "DefaultValue": "default(float)"
+      },
+      {
+        "Name": "ShouldDisplayDiscreteValueLabel",
+        "Type": "bool",
+        "DefaultValue": "false"
+      },
+      {
+        "Name": "ValueLabelTextColor",
+        "Type": "Color",
+        "DefaultValue": "Color.Default"
+      },
+      {
+        "Name": "ValueLabelBackgroundColor",
+        "Type": "Color",
+        "DefaultValue": "Color.Default"
+      },
+      {
+        "Name": "ThumbHollowAtStart",
+        "Type": "bool",
+        "DefaultValue": "false"
+      },
+      {
+        "Name": "DisabledColor",
+        "Type": "Color",
+        "DefaultValue": "Color.Default"
+      },
+      {
+        "Name": "Color",
+        "Type": "Color",
+        "DefaultValue": "Color.Default"
+      },
+      {
+        "Name": "TrackBackgroundColor",
+        "Type": "Color",
+        "DefaultValue": "Color.Default"
+      }
+    ],
     "Events": []
   },
   {

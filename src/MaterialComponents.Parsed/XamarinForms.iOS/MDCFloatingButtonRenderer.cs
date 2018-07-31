@@ -32,6 +32,8 @@ namespace MaterialComponents.iOS
                     SetNativeControl(CreateNativeControl());
                 }
 
+                UpdateMode();
+                UpdateImageLocation();
             }
 
             base.OnElementChanged(e);
@@ -41,6 +43,25 @@ namespace MaterialComponents.iOS
         {
             base.OnElementPropertyChanged(sender, e);
 
+            if (e.PropertyName == XfMDCFloatingButton.ModeProperty.PropertyName)
+            {
+                UpdateMode();
+            }
+            else if (e.PropertyName == XfMDCFloatingButton.ImageLocationProperty.PropertyName)
+            {
+                UpdateImageLocation();
+            }
+            
+        }
+
+        void UpdateMode()
+        {
+            Control.Mode = Element.Mode;
+        }
+
+        void UpdateImageLocation()
+        {
+            Control.ImageLocation = Element.ImageLocation;
         }
 
     }

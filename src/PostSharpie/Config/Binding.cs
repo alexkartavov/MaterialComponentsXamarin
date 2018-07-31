@@ -99,7 +99,7 @@ namespace {0}.iOS
         private readonly string IosUpdateMethodTemplate = @"
         void Update{0}()
         {
-            Control.{0} = Element.{0};
+            Control.{0} = Element.{0}{1};
         }";
 
         //private readonly string AndroidRendererTemplate = @"";
@@ -156,7 +156,8 @@ namespace {0}.iOS
                              .Replace("{1}", property.Name));
                 
                 methods.AppendLine(IosUpdateMethodTemplate
-                                  .Replace("{0}", property.Name));
+                                   .Replace("{0}", property.Name)
+                                   .Replace("{1}", property.Type == "Color" ? ".ToUIColor()" : string.Empty));
             }
 
             content.Append(IosRendererTemplate

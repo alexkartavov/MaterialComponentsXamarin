@@ -82,7 +82,7 @@ namespace MaterialComponents.Forms
         }
 
         public static readonly BindableProperty ShouldRaiseOnTouchProperty =
-            BindableProperty.Create("ShouldRaiseOnTouch", typeof(bool), typeof(XfMDCButton), false);
+            BindableProperty.Create("ShouldRaiseOnTouch", typeof(bool), typeof(XfMDCButton), true);
 
         public bool ShouldRaiseOnTouch
         {
@@ -91,7 +91,7 @@ namespace MaterialComponents.Forms
         }
 
         public static readonly BindableProperty ShouldCapitalizeTitleProperty =
-            BindableProperty.Create("ShouldCapitalizeTitle", typeof(bool), typeof(XfMDCButton), false);
+            BindableProperty.Create("ShouldCapitalizeTitle", typeof(bool), typeof(XfMDCButton), true);
 
         public bool ShouldCapitalizeTitle
         {

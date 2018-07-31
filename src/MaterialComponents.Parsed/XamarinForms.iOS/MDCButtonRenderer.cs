@@ -106,7 +106,7 @@ namespace MaterialComponents.iOS
 
         void UpdateInkColor()
         {
-            Control.InkColor = Element.InkColor;
+            Control.InkColor = Element.InkColor.ToUIColor();
         }
 
         void UpdateInkMaxRippleRadius()
@@ -131,12 +131,12 @@ namespace MaterialComponents.iOS
 
         void UpdateUnderlyingColorHint()
         {
-            Control.UnderlyingColorHint = Element.UnderlyingColorHint;
+            Control.UnderlyingColorHint = Element.UnderlyingColorHint.ToUIColor();
         }
 
         void UpdateCustomTitleColor()
         {
-            Control.CustomTitleColor = Element.CustomTitleColor;
+            Control.CustomTitleColor = Element.CustomTitleColor.ToUIColor();
         }
 
         void UpdateShouldRaiseOnTouch()
@@ -151,7 +151,7 @@ namespace MaterialComponents.iOS
 
         void UpdateUnderlyingColor()
         {
-            Control.UnderlyingColor = Element.UnderlyingColor;
+            Control.UnderlyingColor = Element.UnderlyingColor.ToUIColor();
         }
 
     }

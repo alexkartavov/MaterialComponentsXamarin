@@ -8,6 +8,7 @@
     <RootNamespace>MaterialComponents</RootNamespace>
     <AssemblyName>MaterialComponents</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <ReleaseVersion>39.0.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -115,6 +116,10 @@
 
   </ItemGroup>
   <ItemGroup>
+    <NativeReference Include="..\..\references.58\MDFTextAccessibility.framework">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
     <NativeReference Include="..\..\references.58\MotionAnimator.framework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
@@ -132,10 +137,6 @@
       <SmartLink>False</SmartLink>
     </NativeReference>
     <NativeReference Include="..\..\references.58\MDFInternationalization.framework">
-      <Kind>Framework</Kind>
-      <SmartLink>False</SmartLink>
-    </NativeReference>
-    <NativeReference Include="..\..\..\references.58\MDFTextAccessibility.framework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
